@@ -18,7 +18,7 @@ import com.google.android.material.tabs.TabLayout;
 // * A simple {@link Fragment} subclass.
 // * Use the {@link camnang_Fragment#newInstance} factory method to
 // * create an instance of this fragment.
- */
+ 
 public class camnang_Fragment extends Fragment {
 
 //    // TODO: Rename parameter arguments, choose names that match
