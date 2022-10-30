@@ -63,7 +63,7 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
 //                bundle.putSerializable("object_user",cn);
 //                intent.putExtras(bundle);
                 context.startActivity(intent);
-
+//
 
 
 

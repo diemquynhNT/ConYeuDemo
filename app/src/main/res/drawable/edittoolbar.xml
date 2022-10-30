@@ -4,6 +4,6 @@
     android:endColor="@color/pink1"
     android:centerColor="@color/pink_violet"
     android:startColor="@color/pink2">
-
+<!---->
 </gradient>
 </shape>

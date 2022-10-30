@@ -10,7 +10,7 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
     public ViewPageAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
     }
-
+//xoas
     @NonNull
     @Override
     public Fragment getItem(int position) {

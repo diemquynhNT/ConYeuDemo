@@ -18,7 +18,7 @@ public class calendar_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
-
+//
         btnadd=findViewById(R.id.btnaddcalendar);
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +29,7 @@ public class calendar_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+//
         btnback=findViewById(R.id.btnBackhome);
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override

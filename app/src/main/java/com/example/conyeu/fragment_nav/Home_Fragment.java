@@ -96,7 +96,7 @@ public class Home_Fragment extends Fragment {
         list.add(new Camnang(2, R.drawable.handbook, "Cẩm nang"));
         list.add(new Camnang(3, R.drawable.mother, "Thông tin của mẹ"));
         list.add(new Camnang(4, R.drawable.schedule, "Lịch tiêm ngừa theo tháng"));
-
+//
 
         return list;
     }

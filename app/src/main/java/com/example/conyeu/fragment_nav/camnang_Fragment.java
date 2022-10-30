@@ -14,10 +14,10 @@ import com.example.conyeu.R;
 import com.example.conyeu.menutab_camnang.ViewPageAdapter;
 import com.google.android.material.tabs.TabLayout;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link camnang_Fragment#newInstance} factory method to
- * create an instance of this fragment.
+///**
+// * A simple {@link Fragment} subclass.
+// * Use the {@link camnang_Fragment#newInstance} factory method to
+// * create an instance of this fragment.
  */
 public class camnang_Fragment extends Fragment {
 
@@ -25,7 +25,7 @@ public class camnang_Fragment extends Fragment {
 //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 //    private static final String ARG_PARAM1 = "param1";
 //    private static final String ARG_PARAM2 = "param2";
-//
+
 //    // TODO: Rename and change types of parameters
 //    private String mParam1;
 //    private String mParam2;

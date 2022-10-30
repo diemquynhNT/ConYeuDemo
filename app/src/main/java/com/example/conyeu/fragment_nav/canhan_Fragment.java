@@ -18,7 +18,7 @@ public class  canhan_Fragment extends Fragment {
     View view;
 
     Button btnupdate;
-
+//
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

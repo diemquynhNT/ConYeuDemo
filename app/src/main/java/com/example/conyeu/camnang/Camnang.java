@@ -6,7 +6,7 @@ public class Camnang implements Serializable {
         int id;
         int image_cn;
         String title;
-
+//
         public Camnang(int id, int image_cn, String title) {
             this.id = id;
             this.image_cn = image_cn;
