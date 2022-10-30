@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/ConYeu/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable-xhdpi/border.xml" value="0.1855" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable-xhdpi/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/background_search.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/border.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/custom_edittex.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/edittoolbar.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/header_toolbarbackground.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.188" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_book_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_library_books_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_local_library_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_mail_outline_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_navigate_before_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_notifications_none_24.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_password_24.xml" value="0.188" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.188" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_phone_android_24.xml" value="0.188" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1585" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1855" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/next.xml" value="0.188" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/radius_border_button.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/drawable/toogle.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_addedit_baby.xml" value="0.22" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_addedit_listbaby.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_calendar.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_calender.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_camnang.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_createcalendar.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_event_edit.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_login2.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_logout_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_main.xml" value="0.2097053726169844" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_nhatki.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_nhatki_main.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_notification_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_register.xml" value="0.165625" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_thongbao_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/activity_week_view.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/calendar_cell.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/edittoolbar.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/event_cell.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_add_edit_.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_calendar_.xml" value="0.22" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_camnang_.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_canhan_.xml" value="0.25" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_chuacocon_.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_create_nhat_ki_.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_create_thongbao_.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_dangmangthai_.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_demo.xml" value="0.17552083333333332" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_detail.xml" value="0.16666666666666666" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_dieukhoan_.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_home_.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_lich_.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_nhatki_.xml" value="0.25" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_nuoicon_.xml" value="0.17552083333333332" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_sendmail_.xml" value="0.1" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_thongbao_.xml" value="0.16666666666666666" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/fragment_update_info.xml" value="0.4025670945157526" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/item_row.xml" value="0.4466666666666667" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/itemtitle_row.xml" value="0.4466666666666667" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/layoutheader_menu.xml" value="0.22" />
+        <entry key="..\:/ConYeu/app/src/main/res/layout/listbaby.xml" value="0.5" />
+        <entry key="..\:/ConYeu/app/src/main/res/menu-v26/mnsearch.xml" value="0.1796875" />
+        <entry key="..\:/ConYeu/app/src/main/res/menu/actionbaricon.xml" value="0.22" />
+        <entry key="..\:/ConYeu/app/src/main/res/menu/dramermn.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/menu/menu_nav.xml" value="0.16666666666666666" />
+        <entry key="..\:/ConYeu/app/src/main/res/menu/mnsearch.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/menu/mntoolbar.xml" value="0.3333333333333333" />
+        <entry key="..\:/ConYeu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

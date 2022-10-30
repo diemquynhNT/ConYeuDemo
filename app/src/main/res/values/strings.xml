@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">CON YÊU</string>
+    <string name="slogan">For a better tomorrow</string>
+    <string name="add">Thêm</string>
+    //nav
+    <string name="nav_canhan">Cá nhân</string>
+    <string name="nav_thongbao">Thông báo</string>
+    <string name="nav_tienich">TIỆN ÍCH</string>
+    <string name="nav_camnang">Cẩm nang</string>
+    <string name="nav_nhatki">Nhật kí</string>
+    <string name="nav_lich">Lịch khám và tiêm ngừa</string>
+    <string name="nav_lienhe">LIÊN HỆ</string>
+    <string name="nav_sendmail">Gửi mail cho Con Yêu</string>
+    <string name="nav_dieukhoan">Điều khoản sử dụng</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_logout">Đăng xuất</string>
+    <string name="login">Đăng Nhập</string>
+    <string name="Register">Đăng kí</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_nhatki">Chưa có ghi chú/nhật kí được tạo. Nhấn biểu tượng dấu cộng để thêm</string>
+    //canhan
+    <string name="name_login">Ten đăng nhập:</string>
+    <string name="mail">Mail:</string>
+    <string name="sdt">SĐT:</string>
+    <string name="chamngon">Chăm ngôn nguôi con:</string>
+
+    <string name="username">username</string>
+    <string name="usermail">usermail</string>
+    <string name="usernPhone">usernPhone</string>
+    <string name="user_chamngon">abc</string>
+
+    //nhatki
+    <string name="txtaonhatki">Tạo nhật kí</string>
+    <string name="txtieude">Tiêu đề</string>
+    <string name="noidung">Nội dung</string>
+    <string name="txchooseimg">Chọn một tấm ảnh (Có thể bỏ qua)</string>
+    <string name="txnoidung">Nội dung muốn ghi nhớ</string>
+    <string name="tieude">Tiêu đề</string>
+
+    //Lich
+    <string name="empty_calender">Không có lịch</string>
+    <string name="createcalender">Tạo lịch nhắc</string>
+    <string name="diachi">Địa chỉ</string>
+    <string name="date">Ngày hẹn</string>
+    <string name="time">Giờ hẹn</string>
+    <string name="note">Ghi chú</string>
+
+    //home
+    <string name="home_1">Xin chào, mama!</string>
+    <string name="home_2">Hôm nay con thế nào?!</string>
+
+    //canhan
+    <string name="namebaby">Tên của con:</string>
+    <string name="nickname">Nickname của con:</string>
+    <string name="heightbaby">Chiều cao </string>
+    <string name="weightbaby">Cân nặng: </string>
+    <string name="gioitinh">Giới tính: </string>
+    <string name="birthday">Sinh nhật: </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
