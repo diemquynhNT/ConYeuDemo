@@ -35,7 +35,7 @@ public class Home_Fragment extends Fragment {
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 2);
         mRecyclerView.setLayoutManager(gridLayoutManager);
-////        camnangAdapter.setData(getListUser());
+//       camnangAdapter.setData(getListUser());
         mRecyclerView.setAdapter(Itemadapter);
 
 
