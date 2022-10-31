@@ -1,13 +1,15 @@
-package com.example.conyeu;
+package com.example.conyeu.baby;
 
-public class baby {
+public class Baby {
+    int id;
     String namebaby;
     String nickname;
     int heightbaby;
     int weightbaby;
     String birthday;
 
-    public baby(String namebaby, String nickname, int heightbaby, int weightbaby, String birthday) {
+    public Baby(int id,String namebaby, String nickname, int heightbaby, int weightbaby, String birthday) {
+        this.id=id;
         this.namebaby = namebaby;
         this.nickname = nickname;
         this.heightbaby = heightbaby;
@@ -15,6 +17,15 @@ public class baby {
         this.birthday = birthday;
     }
 //
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNamebaby() {
         return namebaby;
     }
