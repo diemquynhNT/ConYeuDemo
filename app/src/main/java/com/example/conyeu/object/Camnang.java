@@ -1,4 +1,4 @@
-package com.example.conyeu.camnang;
+package com.example.conyeu.object;
 
 import java.io.Serializable;
 

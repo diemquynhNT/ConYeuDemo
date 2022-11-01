@@ -11,7 +11,8 @@ import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 
-import com.example.conyeu.baby.Baby;
+import com.example.conyeu.object.Baby;
+import com.example.conyeu.Adapter.BabyAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class InfoDialogBottomSheet extends BottomSheetDialog {

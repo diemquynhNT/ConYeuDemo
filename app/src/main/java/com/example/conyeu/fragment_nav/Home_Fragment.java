@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.conyeu.R;
-import com.example.conyeu.camnang.Camnang;
-import com.example.conyeu.camnang.itemadapter;
+import com.example.conyeu.object.Camnang;
+import com.example.conyeu.Adapter.itemadapter;
 
 import java.util.ArrayList;
 

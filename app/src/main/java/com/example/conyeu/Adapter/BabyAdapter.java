@@ -1,7 +1,6 @@
-package com.example.conyeu;
+package com.example.conyeu.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.conyeu.baby.Baby;
-import com.example.conyeu.camnang.Camnang;
-import com.example.conyeu.camnang.Camnang_Adapter;
+import com.example.conyeu.R;
+import com.example.conyeu.object.Baby;
 
 import java.util.ArrayList;
 
