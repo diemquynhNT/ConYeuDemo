@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "886016802388",
+    "project_id": "modulelogin-1a760",
+    "storage_bucket": "modulelogin-1a760.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886016802388:android:95037ab79d580bc01677c1",
+        "android_client_info": {
+          "package_name": "com.example.conyeu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886016802388-3qb5qanldjh154pghp7tpgpedfpgeqc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.conyeu",
+            "certificate_hash": "6c01601a795bc05ad4f26e37c551f2175d5bedfe"
+          }
+        },
+        {
+          "client_id": "886016802388-h05uvvb0q5d9o22k5nmuh3kheb7fel70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSIZHblMl4JUXLv5Bx4I1YFWfv5EECenI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886016802388-h05uvvb0q5d9o22k5nmuh3kheb7fel70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

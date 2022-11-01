@@ -112,9 +112,9 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
 //        AlertDialog alertDialog = builder.create();
 //        alertDialog.show();
 
-        InfoDialogBottomSheet dialog = new InfoDialogBottomSheet(this.getContext(),mLauncher,p,babyAdapter);
-        dialog.findView();
-        dialog.show();
+//        InfoDialogBottomSheet dialog = new InfoDialogBottomSheet(this.getContext(),mLauncher,p,babyAdapter);
+//        dialog.findView();
+//        dialog.show();
     }
 
 
