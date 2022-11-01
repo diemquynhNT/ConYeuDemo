@@ -20,9 +20,6 @@
             android:name=".AddeditBabyActivity"
             android:exported="false" />
         <activity
-            android:name=".addeditListbaby"
-            android:exported="false" />
-        <activity
             android:name=".camnang_Activity"
             android:exported="false" />
         <activity
