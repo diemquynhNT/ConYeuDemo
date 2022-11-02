@@ -136,7 +136,7 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
 //        dialog.findView();
 //        dialog.show();
     }
-
+//
     private void showUserInfomation()
     {
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
