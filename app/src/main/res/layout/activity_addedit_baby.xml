@@ -18,7 +18,7 @@
         android:hint="@string/namebaby">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edName"
+            android:id="@+id/edcheckpass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"

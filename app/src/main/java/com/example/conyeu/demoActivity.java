@@ -20,25 +20,23 @@ public class demoActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                nextActivity();
+                FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+                //user=null=chua login
+                if(user==null)
+                {
+                    Intent intent=new Intent(demoActivity.this,Login_Activity.class);
+                    startActivity(intent);
+
+                }else {
+                    //login roi
+                    Intent intent=new Intent(demoActivity.this,MainActivity.class);
+                    startActivity(intent);
+
+                }
+
             }//gio hiem thi
-        },2000);
+        },1000);
     }
 
-    private void nextActivity() {
-        //kiem tra user login chua
-//        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-//        //user=null=chua login
-//        if(user==null)
-//        {
-//
-//        }else {
-//            //login roi
-//
-//
-//        }
 
-        Intent intent=new Intent(this,Login_Activity.class);
-        startActivity(intent);
-    }
 }

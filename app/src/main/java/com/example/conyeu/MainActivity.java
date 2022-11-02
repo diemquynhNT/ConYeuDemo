@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if (id==R.id.nav_logout)
         {
             if (mCurrentFragment!=ACTIVITY_LOGOUT){
-                Intent intent= new Intent(MainActivity.this,Logout_MainActivity.class);
+                Intent intent= new Intent(MainActivity.this,Login_Activity.class);
                 startActivity(intent);
 
 
