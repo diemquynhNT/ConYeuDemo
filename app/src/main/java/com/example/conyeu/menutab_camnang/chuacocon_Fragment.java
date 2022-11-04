@@ -100,10 +100,10 @@ public class chuacocon_Fragment extends Fragment {
     }
     private ArrayList<Camnang> getListUser(){
         ArrayList<Camnang> list=new ArrayList<>();
-        list.add(new Camnang(1,R.drawable.ditruyen,"Di truyển và giới tính"));
-        list.add(new Camnang(2,R.drawable.heart,"Tâm lý và sức khỏe"));
-        list.add(new Camnang(3,R.drawable.nutrition,"Dinh dưỡng"));
-        list.add(new Camnang(4,R.drawable.yoga,"Thay đổi thói quen"));
+//        list.add(new Camnang(1,R.drawable.ditruyen,"Di truyển và giới tính"));
+//        list.add(new Camnang(2,R.drawable.heart,"Tâm lý và sức khỏe"));
+//        list.add(new Camnang(3,R.drawable.nutrition,"Dinh dưỡng"));
+//        list.add(new Camnang(4,R.drawable.yoga,"Thay đổi thói quen"));
 
         return list;
     }

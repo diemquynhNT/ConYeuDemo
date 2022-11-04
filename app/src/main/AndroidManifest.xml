@@ -7,8 +7,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/concung"
-        android:label="@string/app_name"
+        android:icon="@drawable/logoconyeu"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConYeu"
@@ -20,9 +19,6 @@
             android:name=".AddeditBabyActivity"
             android:exported="false" />
         <activity
-            android:name=".addeditListbaby"
-            android:exported="false" />
-        <activity
             android:name=".camnang_Activity"
             android:exported="false" />
         <activity
@@ -32,16 +28,16 @@
             android:name=".calendar_Activity"
             android:exported="false" />
         <activity
-            android:name=".Register_Activity"
-            android:exported="false" />
-        <activity
             android:name=".Login_Activity"
             android:exported="false" />
         <activity
-            android:name=".Logout_MainActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demoActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

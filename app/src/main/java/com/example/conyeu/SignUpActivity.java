@@ -19,17 +19,18 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpActivity extends AppCompatActivity {
-    EditText edtUser,edtPass,edtPasscheck;
+    EditText edtMail,edtPass;
     Button btnSignup;
-    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        edtUser=findViewById(R.id.edMail);
+
+        edtMail=findViewById(R.id.edMail);
         edtPass=findViewById(R.id.edpass);
-        edtPasscheck=findViewById(R.id.edpass);
-        progressDialog=new ProgressDialog(this);
+//
+
 
         btnSignup=findViewById(R.id.btnLogin);
        onClickSignUp();
@@ -40,15 +41,14 @@ public class SignUpActivity extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String strUser = edtUser.getText().toString().trim();
+                String strUser = edtMail.getText().toString().trim();
                 String strPass = edtPass.getText().toString().trim();
 
                     FirebaseAuth auth = FirebaseAuth.getInstance();
-                    progressDialog.show();
                     auth.createUserWithEmailAndPassword(strUser, strPass).addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            progressDialog.dismiss();
+
                             if (task.isSuccessful()) {
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 startActivity(intent);

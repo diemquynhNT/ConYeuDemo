@@ -17,22 +17,22 @@
 <!--            android:title="@string/nav_thongbao" />-->
 
     </group>
-    <item android:title="@string/nav_tienich">
-        <menu>
-            <item
-                android:icon="@drawable/ic_baseline_local_library_24"
-                android:id="@+id/nav_camnang"
-                android:title="@string/nav_camnang" />
-            <item
-                android:icon="@drawable/ic_baseline_book_24"
-                android:id="@+id/nav_nhaki"
-                android:title="@string/nav_nhatki" />
-            <item
-                android:icon="@drawable/ic_baseline_calendar_month_24"
-                android:id="@+id/nav_lich"
-                android:title="@string/nav_lich" />
-        </menu>
-    </item>
+<!--    <item android:title="@string/nav_tienich">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:icon="@drawable/ic_baseline_local_library_24"-->
+<!--                android:id="@+id/nav_camnang"-->
+<!--                android:title="@string/nav_camnang" />-->
+<!--            <item-->
+<!--                android:icon="@drawable/ic_baseline_book_24"-->
+<!--                android:id="@+id/nav_nhaki"-->
+<!--                android:title="@string/nav_nhatki" />-->
+<!--            <item-->
+<!--                android:icon="@drawable/ic_baseline_calendar_month_24"-->
+<!--                android:id="@+id/nav_lich"-->
+<!--                android:title="@string/nav_lich" />-->
+<!--        </menu>-->
+<!--    </item>-->
     <group android:checkableBehavior="single">
                     <item
                         android:icon="@drawable/ic_baseline_logout_24"

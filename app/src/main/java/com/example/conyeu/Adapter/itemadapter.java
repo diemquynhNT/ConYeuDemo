@@ -51,7 +51,7 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
             @Override
             public void onClick(View v) {
 
-                if(cn.getTitle()=="Thông tin của con")
+                if(cn.getTitle()=="Thông báo")
                 {
                     Intent intent=new Intent(context, camnang_Activity.class);
 //                Bundle bundle=new Bundle();
@@ -62,7 +62,7 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
                 else if (cn.getTitle()=="Cẩm nang") {
 
                 }
-                else if (cn.getTitle()=="Thông tin của mẹ") {
+                else if (cn.getTitle()=="Nhật kí") {
 
                 }
                 else if (cn.getTitle()=="Lịch tiêm ngừa theo tháng") {

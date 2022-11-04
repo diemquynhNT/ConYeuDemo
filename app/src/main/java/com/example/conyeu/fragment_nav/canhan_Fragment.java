@@ -1,7 +1,6 @@
 package com.example.conyeu.fragment_nav;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResult;
@@ -24,8 +23,6 @@ import com.example.conyeu.Adapter.BabyAdapter;
 import com.example.conyeu.InfoDialogBottomSheet;
 import com.example.conyeu.R;
 import com.example.conyeu.object.Baby;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
@@ -43,7 +40,7 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
     TextView txnameuser,txemail,txnumberp;
 
 
-    Button btnupdate,btnaddbaby;
+    Button btnupdateUser,btnaddbaby;
     int pos;
 //
     @Override
@@ -51,28 +48,27 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_canhan_, container, false);
+        //anh xa
         imgavatar=view.findViewById(R.id.imgAvatar);
         txnameuser=view.findViewById(R.id.txnamelogin);
         txemail=view.findViewById(R.id.txmail);
         txnumberp=view.findViewById(R.id.txphone);
 
-
-
-
-
-
-
-
+        //do list
         mRecyclerView=view.findViewById(R.id.rvlistbaby);
         babyAdapter = new BabyAdapter(getListUser(),this);
-//        GridLayoutManager gridLayoutManager=new GridLayoutManager(view.getContext(),3);
-//        mRecyclerView.setLayoutManager(gridLayoutManager);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(), LinearLayoutManager.VERTICAL));
-
         mRecyclerView.setAdapter(babyAdapter);
 
-        btnupdate =view.findViewById(R.id.btn_update);
+
+        //su kien update thong tin User
+
+
+
+
+
+
         btnaddbaby=view.findViewById(R.id.btn_addbaby);
         btnaddbaby.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,33 +128,12 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
 //        AlertDialog alertDialog = builder.create();
 //        alertDialog.show();
 
-//        InfoDialogBottomSheet dialog = new InfoDialogBottomSheet(this.getContext(),mLauncher,p,babyAdapter);
-//        dialog.findView();
-//        dialog.show();
+        InfoDialogBottomSheet dialog = new InfoDialogBottomSheet(this.getContext(),mLauncher,p,babyAdapter);
+        dialog.findView();
+        dialog.show();
     }
 //
-    private void showUserInfomation()
-    {
-        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-        if(user==null)
-        {
-            return;
-        }
-        else {
-            String name = user.getDisplayName();
-            String email = user.getEmail();
-            Uri photoUrl = user.getPhotoUrl();
 
-            // Check if user's email is verified
-            boolean emailVerified = user.isEmailVerified();
-            txnameuser.setText(name);
-            txemail.setText(email);
-
-
-
-
-        }
-    }
 
 
 

@@ -88,13 +88,13 @@ public class dangmangthai_Fragment extends Fragment {
 
     private ArrayList<Camnang> getListUser(){
         ArrayList<Camnang> list=new ArrayList<>();
-        list.add(new Camnang(1,R.drawable.thaiki,"Thai nhi theo tuần"));
-        list.add(new Camnang(2,R.drawable.thaydoi,"Thay đổi của mẹ"));
-        list.add(new Camnang(3,R.drawable.nutrionpregnant,"Dinh dưỡng cho mẹ bầu"));
-        list.add(new Camnang(4,R.drawable.visitingdoctor,"Khám thai"));
-        list.add(new Camnang(5,R.drawable.sinhno,"Sinh nở"));
-        list.add(new Camnang(6,R.drawable.problem,"Các vấn đề thường gặp"));
-        list.add(new Camnang(7,R.drawable.thaigiao,"Thai giáo"));
+//        list.add(new Camnang(1,R.drawable.thaiki,"Thai nhi theo tuần"));
+//        list.add(new Camnang(2,R.drawable.thaydoi,"Thay đổi của mẹ"));
+//        list.add(new Camnang(3,R.drawable.nutrionpregnant,"Dinh dưỡng cho mẹ bầu"));
+//        list.add(new Camnang(4,R.drawable.visitingdoctor,"Khám thai"));
+//        list.add(new Camnang(5,R.drawable.sinhno,"Sinh nở"));
+//        list.add(new Camnang(6,R.drawable.problem,"Các vấn đề thường gặp"));
+//        list.add(new Camnang(7,R.drawable.thaigiao,"Thai giáo"));
 
         return list;
     }

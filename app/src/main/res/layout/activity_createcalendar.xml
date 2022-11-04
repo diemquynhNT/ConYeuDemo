@@ -53,7 +53,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txinput_title"
+            android:id="@+id/TxnameUser"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,33 +67,33 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtitle"
+                android:id="@+id/edtnameparent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txinput_address"
+            android:id="@+id/tilMainUser"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/diachi"
-            app:layout_constraintEnd_toEndOf="@+id/txinput_title"
-            app:layout_constraintStart_toStartOf="@+id/txinput_title"
-            app:layout_constraintTop_toBottomOf="@+id/txinput_title">
+            app:layout_constraintEnd_toEndOf="@+id/TxnameUser"
+            app:layout_constraintStart_toStartOf="@+id/TxnameUser"
+            app:layout_constraintTop_toBottomOf="@+id/TxnameUser">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edaddress"
+                android:id="@+id/edMailparent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txinput_note"
+            android:id="@+id/tilSDT"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             android:layout_width="0dp"
@@ -101,12 +101,12 @@
             android:layout_marginTop="16dp"
             android:hint="@string/note"
 
-            app:layout_constraintEnd_toEndOf="@+id/txinput_address"
-            app:layout_constraintStart_toStartOf="@+id/txinput_address"
-            app:layout_constraintTop_toBottomOf="@+id/txinput_address">
+            app:layout_constraintEnd_toEndOf="@+id/tilMainUser"
+            app:layout_constraintStart_toStartOf="@+id/tilMainUser"
+            app:layout_constraintTop_toBottomOf="@+id/tilMainUser">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edNote"
+                android:id="@+id/edSDTparent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
@@ -119,9 +119,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/time"
-            app:layout_constraintEnd_toEndOf="@+id/txinput_note"
-            app:layout_constraintStart_toStartOf="@+id/txinput_note"
-            app:layout_constraintTop_toBottomOf="@+id/txinput_note">
+            app:layout_constraintEnd_toEndOf="@+id/tilSDT"
+            app:layout_constraintStart_toStartOf="@+id/tilSDT"
+            app:layout_constraintTop_toBottomOf="@+id/tilSDT">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edTime"
@@ -153,7 +153,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnAdd_calendar"
+            android:id="@+id/btnUpdateUser"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"

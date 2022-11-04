@@ -92,13 +92,13 @@ public class nuoicon_Fragment extends Fragment {
 
     private ArrayList<Camnang> getListUser(){
         ArrayList<Camnang> list=new ArrayList<>();
-        list.add(new Camnang(1,R.drawable.baby1,"Trẻ sơ sinh"));
-        list.add(new Camnang(2,R.drawable.tiem,"Tiêm phòng cho trẻ"));
-        list.add(new Camnang(3,R.drawable.benh,"Bệnh trẻ em"));
-        list.add(new Camnang(4,R.drawable.tuankhunghoang,"Tuần khủng hoảng"));
-        list.add(new Camnang(5,R.drawable.treosinh,"An toàn cho bé"));
-        list.add(new Camnang(6,R.drawable.dauhieu,"Dấu hiệu bất thường"));
-        list.add(new Camnang(7,R.drawable.dungthuoc,"Dùng thuốc an toàn"));
+//        list.add(new Camnang(1,R.drawable.baby1,"Trẻ sơ sinh"));
+//        list.add(new Camnang(2,R.drawable.tiem,"Tiêm phòng cho trẻ"));
+//        list.add(new Camnang(3,R.drawable.benh,"Bệnh trẻ em"));
+//        list.add(new Camnang(4,R.drawable.tuankhunghoang,"Tuần khủng hoảng"));
+//        list.add(new Camnang(5,R.drawable.treosinh,"An toàn cho bé"));
+//        list.add(new Camnang(6,R.drawable.dauhieu,"Dấu hiệu bất thường"));
+//        list.add(new Camnang(7,R.drawable.dungthuoc,"Dùng thuốc an toàn"));
 
 
         return list;

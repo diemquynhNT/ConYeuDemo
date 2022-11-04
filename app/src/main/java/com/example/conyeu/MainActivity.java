@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Button btncamnang,btnnhatki,btncanhan,btnlich;
     private static final int FRAGMENT_HOME=0;
     private static final int FRAGMENT_CANHAN=1;
-    private static final int FRAGMENT_THONGBAO=2;
-    private static final int FRAGMENT_CAMNANG=3;
+//    private static final int FRAGMENT_THONGBAO=2;
+//    private static final int FRAGMENT_CAMNANG=3;
 //    private static final int ACTIVITY_CAMNANG=3;
-    private static final int FRAGMENT_NHATKI=4;
-    private static final int ACTIVITY_LICH=5;
+//    private static final int FRAGMENT_NHATKI=4;
+//    private static final int ACTIVITY_LICH=5;
 //    private static final int FRAGMENT_MAIL=6;
 //    private static final int FRAGMENT_DIEUKHOAN=7;
     private static final int ACTIVITY_LOGOUT=8;
@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navView.setNavigationItemSelectedListener(this);
         //XU LY KHI CLICK VAO ITEM THI CHO RA LAYOUT TUONG UNG
         replaceFragment(new Home_Fragment());
-        navView.getMenu().findItem(R.id.nav_camnang).setCheckable(true);
-        navView.getMenu().findItem(R.id.nav_nhaki).setCheckable(true);
-        navView.getMenu().findItem(R.id.nav_lich).setCheckable(true);
+//        navView.getMenu().findItem(R.id.nav_camnang).setCheckable(true);
+//        navView.getMenu().findItem(R.id.nav_nhaki).setCheckable(true);
+//        navView.getMenu().findItem(R.id.nav_lich).setCheckable(true);
 //        navView.getMenu().findItem(R.id.nav_sendmail).setCheckable(true);
 //        navView.getMenu().findItem(R.id.nav_dieukhoan).setCheckable(true);
 
@@ -85,53 +85,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         int id=item.getItemId();
-        if(id==R.id.nav_camnang){
-            if (mCurrentFragment!=FRAGMENT_CAMNANG){
-                replaceFragment(new camnang_Fragment());
-                mCurrentFragment=FRAGMENT_CAMNANG;
-//                Intent intent = new Intent();
-//                intent=new Intent(MainActivity.this,camnang_Activity.class);
-////                intent.putExtra("flag",1);
-//                startActivity(intent);
-//                mCurrentFragment=ACTIVITY_CAMNANG;
+        if(id==R.id.nav_home){
+            if (mCurrentFragment!=FRAGMENT_HOME){
+                replaceFragment(new Home_Fragment());
+                mCurrentFragment=FRAGMENT_HOME;
+
             }
 
-        }else if (id==R.id.nav_nhaki)
-        {
-            if (mCurrentFragment!=FRAGMENT_NHATKI){
-                replaceFragment(new nhatki_Fragment());
-                mCurrentFragment=FRAGMENT_NHATKI;
-            }
-        }else if (id==R.id.nav_lich)
-        {
-            if (mCurrentFragment!=ACTIVITY_LICH){
-                Intent intent = new Intent();
-                intent=new Intent(MainActivity.this,calendar_Activity.class);
-                intent.putExtra("flag",1);
-                startActivity(intent);
-                mCurrentFragment=ACTIVITY_LICH;
-            }
         }else if (id==R.id.nav_canhan)
         {
             if (mCurrentFragment!=FRAGMENT_CANHAN){
                 replaceFragment(new canhan_Fragment());
                 mCurrentFragment=FRAGMENT_CANHAN;
-            }
-        }
-//        else if (id==R.id.nav_thongbao)
-//        {
-//            if (mCurrentFragment!=FRAGMENT_THONGBAO){
-//                replaceFragment(new thongbao_Fragment());
-//                mCurrentFragment=FRAGMENT_THONGBAO;
-//            }
-//        }
-
-
-        else if (id==R.id.nav_home)
-        {
-            if (mCurrentFragment!=FRAGMENT_HOME){
-                replaceFragment(new Home_Fragment());
-                mCurrentFragment=FRAGMENT_HOME;
             }
         }
 
@@ -141,8 +106,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent= new Intent(MainActivity.this,Login_Activity.class);
                 startActivity(intent);
 
-
-                //mCurrentFragment=FRAGMENT_THONGBAO;
             }
         }
 
