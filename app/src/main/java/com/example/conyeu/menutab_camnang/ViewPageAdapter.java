@@ -7,7 +7,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class ViewPageAdapter extends FragmentStatePagerAdapter {
-    public ViewPageAdapter(@NonNull FragmentManager fm, int behavior) {
+    public ViewPageAdapter(@NonNull FragmentManager fm, int behavior)
+    {
         super(fm, behavior);
     }
 //xoas

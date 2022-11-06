@@ -48,18 +48,18 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_canhan_, container, false);
-        //anh xa
-        imgavatar=view.findViewById(R.id.imgAvatar);
-        txnameuser=view.findViewById(R.id.txnamelogin);
-        txemail=view.findViewById(R.id.txmail);
-        txnumberp=view.findViewById(R.id.txphone);
-
-        //do list
-        mRecyclerView=view.findViewById(R.id.rvlistbaby);
-        babyAdapter = new BabyAdapter(getListUser(),this);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false));
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(), LinearLayoutManager.VERTICAL));
-        mRecyclerView.setAdapter(babyAdapter);
+//        //anh xa
+//        imgavatar=view.findViewById(R.id.imgAvatar);
+//        txnameuser=view.findViewById(R.id.txnamelogin);
+//        txemail=view.findViewById(R.id.txmail);
+//        txnumberp=view.findViewById(R.id.txphone);
+//
+//        //do list
+//        mRecyclerView=view.findViewById(R.id.rvlistbaby);
+//        babyAdapter = new BabyAdapter(getListUser(),this);
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false));
+//        mRecyclerView.addItemDecoration(new DividerItemDecoration(view.getContext(), LinearLayoutManager.VERTICAL));
+//        mRecyclerView.setAdapter(babyAdapter);
 
 
         //su kien update thong tin User
@@ -69,49 +69,49 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
 
 
 
-        btnaddbaby=view.findViewById(R.id.btn_addbaby);
-        btnaddbaby.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        btnaddbaby=view.findViewById(R.id.btn_addbaby);
+//        btnaddbaby.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //                Intent intent=new Intent(getContext(), AddeditBabyActivity.class);
 ////                Bundle bundle=new Bundle();
 ////                bundle.putSerializable("object_user",cn);
 ////                intent.putExtras(bundle);
 //                startActivity(intent);
 //
-            }
-        });
-
-
-
+//            }
+//        });
+//
+//
+//
         return view;
     }
-    private ArrayList<Baby> getListUser(){
-        ArrayList<Baby> list=new ArrayList<>();
-        list.add(new Baby(1,"nam","bo",20,1,"1/1/2002"));
-        list.add(new Baby(2,"nam","bo",20,1,"1/1/2002"));
-        list.add(new Baby(3,"nam","bo",20,1,"1/1/2002"));
-
-
-        return list;
-    }
-    ActivityResultLauncher<Intent> mLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == RESULT_OK) {
-                        if (result.getData().getIntExtra("flag", 0) == 1) {
-                            Baby babys = (Baby) result.getData().getSerializableExtra("contact");
-                            babyAdapter.addBaby(babys);
-                        } else {
-                            Baby babys = (Baby) result.getData().getSerializableExtra("contact");
-                            babyAdapter.editBaby(babys, pos);
-                        }
-                    }
-                }
-            }
-    );
+//    private ArrayList<Baby> getListUser(){
+//        ArrayList<Baby> list=new ArrayList<>();
+//        list.add(new Baby(1,"nam","bo",20,1,"1/1/2002"));
+//        list.add(new Baby(2,"nam","bo",20,1,"1/1/2002"));
+//        list.add(new Baby(3,"nam","bo",20,1,"1/1/2002"));
+//
+//
+//        return list;
+//    }
+//    ActivityResultLauncher<Intent> mLauncher = registerForActivityResult(
+//            new ActivityResultContracts.StartActivityForResult(),
+//            new ActivityResultCallback<ActivityResult>() {
+//                @Override
+//                public void onActivityResult(ActivityResult result) {
+//                    if (result.getResultCode() == RESULT_OK) {
+//                        if (result.getData().getIntExtra("flag", 0) == 1) {
+//                            Baby babys = (Baby) result.getData().getSerializableExtra("contact");
+//                            babyAdapter.addBaby(babys);
+//                        } else {
+//                            Baby babys = (Baby) result.getData().getSerializableExtra("contact");
+//                            babyAdapter.editBaby(babys, pos);
+//                        }
+//                    }
+//                }
+//            }
+//    );
 
 
     @Override
@@ -128,9 +128,9 @@ public class  canhan_Fragment extends Fragment implements BabyAdapter.Listener {
 //        AlertDialog alertDialog = builder.create();
 //        alertDialog.show();
 
-        InfoDialogBottomSheet dialog = new InfoDialogBottomSheet(this.getContext(),mLauncher,p,babyAdapter);
-        dialog.findView();
-        dialog.show();
+//        InfoDialogBottomSheet dialog = new InfoDialogBottomSheet(this.getContext(),mLauncher,p,babyAdapter);
+//        dialog.findView();
+//        dialog.show();
     }
 //
 

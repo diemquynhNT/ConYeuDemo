@@ -85,21 +85,24 @@
         <entry key="..\:/ConYeudemo/app/src/main/res/drawable/edittoolbar.xml" value="0.188" />
         <entry key="..\:/ConYeudemo/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.1865" />
         <entry key="..\:/ConYeudemo/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1865" />
+        <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_about_baby.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_add_infor_user.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_addedit_baby.xml" value="0.4466666666666667" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_addinfo_user2.xml" value="0.1796875" />
-        <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_calendar.xml" value="0.1796875" />
-        <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_camnang.xml" value="0.4466666666666667" />
+        <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_calendar.xml" value="0.22" />
+        <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_camnang.xml" value="0.22" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_createcalendar.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_demo.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_info_baby.xml" value="0.22" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_infobaby.xml" value="0.1796875" />
+        <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_infobaby_main.xml" value="0.1796875" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_logout_main.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_register.xml" value="0.1796875" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_sign_up.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/activity_signin.xml" value="0.1" />
+        <entry key="..\:/ConYeudemo/app/src/main/res/layout/fragment_camnang_.xml" value="0.1796875" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/fragment_canhan_.xml" value="0.3333333333333333" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/fragment_chuacocon_.xml" value="0.1796875" />
         <entry key="..\:/ConYeudemo/app/src/main/res/layout/fragment_detail.xml" value="0.1796875" />

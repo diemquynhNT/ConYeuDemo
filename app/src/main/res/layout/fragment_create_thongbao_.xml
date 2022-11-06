@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_paper"
+            android:id="@+id/view_papercamnang"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"

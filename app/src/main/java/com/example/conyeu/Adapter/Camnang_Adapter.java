@@ -53,12 +53,7 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(context,camnang_Activity.class);
-//                Bundle bundle=new Bundle();
-//                bundle.putSerializable("object_user",cn);
-//                intent.putExtras(bundle);
-                context.startActivity(intent);
-//
+
 
 
 

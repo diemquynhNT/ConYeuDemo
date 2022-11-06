@@ -49,8 +49,8 @@ public class Home_Fragment extends Fragment {
     private ArrayList<Camnang> getListItem() {
         ArrayList<Camnang> list = new ArrayList<>();
         list.add(new Camnang(1,  R.drawable.handbook, "Cẩm nang"));
-        list.add(new Camnang(2, R.drawable.handbook, "Nhật kí"));
-        list.add(new Camnang(3, R.drawable.mother, "Thông báo"));
+        list.add(new Camnang(2, R.drawable.notebook, "Nhật kí"));
+        list.add(new Camnang(3, R.drawable.baby, "Thông tin của con"));
         list.add(new Camnang(4, R.drawable.schedule, "Lịch tiêm ngừa theo tháng"));
 //
 

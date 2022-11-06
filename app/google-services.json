@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "886016802388",
-    "project_id": "modulelogin-1a760",
-    "storage_bucket": "modulelogin-1a760.appspot.com"
+    "project_number": "245140342405",
+    "project_id": "conyeu-79c02",
+    "storage_bucket": "conyeu-79c02.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:886016802388:android:95037ab79d580bc01677c1",
+        "mobilesdk_app_id": "1:245140342405:android:13b9ce342f04d30d050bec",
         "android_client_info": {
           "package_name": "com.example.conyeu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "886016802388-3qb5qanldjh154pghp7tpgpedfpgeqc2.apps.googleusercontent.com",
+          "client_id": "245140342405-aaqjhnp7airqnv9l7o51qgd05lc5cks8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.conyeu",
@@ -22,20 +22,20 @@
           }
         },
         {
-          "client_id": "886016802388-h05uvvb0q5d9o22k5nmuh3kheb7fel70.apps.googleusercontent.com",
+          "client_id": "245140342405-i6svou88m3ugd4sk3p7p4ffoguonnv34.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBSIZHblMl4JUXLv5Bx4I1YFWfv5EECenI"
+          "current_key": "AIzaSyAT80WBs0oaV2G7gCaqpO-dvqRx9_v6-P8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "886016802388-h05uvvb0q5d9o22k5nmuh3kheb7fel70.apps.googleusercontent.com",
+              "client_id": "245140342405-i6svou88m3ugd4sk3p7p4ffoguonnv34.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

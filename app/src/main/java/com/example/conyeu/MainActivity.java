@@ -1,7 +1,6 @@
 package com.example.conyeu;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,15 +12,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.conyeu.fragment_nav.Home_Fragment;
-import com.example.conyeu.fragment_nav.camnang_Fragment;
 import com.example.conyeu.fragment_nav.canhan_Fragment;
-import com.example.conyeu.fragment_nav.nhatki_Fragment;
-import com.example.conyeu.fragment_nav.thongbao_Fragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {

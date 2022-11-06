@@ -54,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 finishAffinity();
                             } else {
-                                Toast.makeText(SignUpActivity.this, "Nhập sai ", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(SignUpActivity.this, "Nhập sai ", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

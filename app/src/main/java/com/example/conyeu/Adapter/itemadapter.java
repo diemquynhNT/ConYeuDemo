@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conyeu.R;
+import com.example.conyeu.calendar_Activity;
 import com.example.conyeu.object.Camnang;
 import com.example.conyeu.camnang_Activity;
 
@@ -40,36 +41,34 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
     @Override
     public void onBindViewHolder(@NonNull CamnangVH holder, int position) {
 
-        Camnang cn=Listcamnang.get(position);
-        if(cn==null)
+        Camnang item=Listcamnang.get(position);
+        if(item==null)
         {
             return;
         }
-        holder.imgitem.setImageResource(cn.getImage_cn());
-        holder.txTitle.setText(cn.getTitle());
+        holder.imgitem.setImageResource(item.getImage_cn());
+        holder.txTitle.setText(item.getTitle());
         holder.layoutItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(cn.getTitle()=="Thông báo")
+                if(item.getTitle()=="Thông báo")
                 {
+
+                }
+                else if (item.getTitle()=="Cẩm nang") {
                     Intent intent=new Intent(context, camnang_Activity.class);
 //                Bundle bundle=new Bundle();
 //                bundle.putSerializable("object_user",cn);
 //                intent.putExtras(bundle);
                     context.startActivity(intent);
-                }
-                else if (cn.getTitle()=="Cẩm nang") {
 
                 }
-                else if (cn.getTitle()=="Nhật kí") {
+                else if (item.getTitle()=="Nhật kí") {
 
                 }
-                else if (cn.getTitle()=="Lịch tiêm ngừa theo tháng") {
-                    Intent intent=new Intent(context, camnang_Activity.class);
-//                Bundle bundle=new Bundle();
-//                bundle.putSerializable("object_user",cn);
-//                intent.putExtras(bundle);
+                else if (item.getTitle()=="Lịch tiêm ngừa theo tháng") {
+                    Intent intent=new Intent(context, calendar_Activity.class);
                     context.startActivity(intent);
                 }
 
