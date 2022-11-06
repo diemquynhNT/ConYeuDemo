@@ -1,7 +1,6 @@
 package com.example.conyeu.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conyeu.R;
 import com.example.conyeu.object.Camnang;
-import com.example.conyeu.camnang_Activity;
 
 import java.util.ArrayList;
 
@@ -25,7 +23,7 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
     private ArrayList<Camnang> Listcamnang;
     private Context context;
 
-    public Camnang_Adapter(ArrayList<Camnang> listcamnang, Context context) {
+    public Camnang_Adapter(ArrayList<Camnang> listcamnang,Context context) {
         this.Listcamnang = listcamnang;
         this.context = context;
     }
@@ -46,19 +44,19 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
         {
             return;
         }
-        holder.Img_Camnang.setImageResource(cn.getImage_cn());
-        holder.txTitle.setText(cn.getTitle());
-
-        holder.layoutItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-
-
-
-            }
-        });
+//        holder.Img_Camnang.setImageResource(cn.getImage_cn());
+        holder.txTitle.setText("ID"+cn.getTitle());
+        holder.txcontent.setText(cn.getContent());
+//        holder.layoutItem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//
+//
+//
+//            }
+//        });
     }
 
 
@@ -75,14 +73,15 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
 
     class CamnangVH extends RecyclerView.ViewHolder{
 
-        public TextView txTitle;
-        public ImageView Img_Camnang;
-        public ConstraintLayout layoutItem;
+        public TextView txTitle,txcontent;
+//        public ImageView Img_Camnang;
+//        public ConstraintLayout layoutItem;
         public CamnangVH(@NonNull View itemView) {
             super(itemView);
-            txTitle=itemView.findViewById(R.id.txName);
-            Img_Camnang=itemView.findViewById(R.id.imgCamnang);
-            layoutItem=itemView.findViewById(R.id.layout_item);
+            txTitle=itemView.findViewById(R.id.txtitlecn);
+            txTitle=itemView.findViewById(R.id.txcontent);
+//            Img_Camnang=itemView.findViewById(R.id.imgCamnang);
+//            layoutItem=itemView.findViewById(R.id.layout_item);
         }
     }
 }

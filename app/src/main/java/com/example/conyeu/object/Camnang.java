@@ -6,14 +6,27 @@ public class Camnang implements Serializable {
         int id;
         int image_cn;
         String title;
+        String content;
 //
-        public Camnang(int id, int image_cn, String title) {
+        public Camnang(int id, int image_cn, String title,String content) {
             this.id = id;
             this.image_cn = image_cn;
             this.title = title;
+            this.content=content;
         }
 
-        public int getId() {
+    public Camnang(int id, int handbook, String cẩm_nang) {
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public int getId() {
             return id;
         }
 

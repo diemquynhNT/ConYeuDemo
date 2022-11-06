@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.conyeu.R;
-import com.example.conyeu.fragment_nav.nhatki_Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,10 +70,10 @@ public class createThongbao_Fragment extends Fragment {
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment secondFrag=new nhatki_Fragment();
-                FragmentTransaction transaction=getActivity().getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.content_frame,secondFrag);
-                transaction.commit();
+//                Fragment secondFrag=new nhatki_Fragment();
+//                FragmentTransaction transaction=getActivity().getSupportFragmentManager().beginTransaction();
+//                transaction.replace(R.id.content_frame,secondFrag);
+//                transaction.commit();
 //
 
             }

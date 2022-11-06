@@ -30,7 +30,7 @@ public class Home_Fragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home_, container, false);
 
-        mRecyclerView = view.findViewById(R.id.rvhome);
+        mRecyclerView = view.findViewById(R.id.rvchuacocon);
         Itemadapter = new itemadapter(getListItem(), view.getContext());
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 2);
@@ -48,10 +48,10 @@ public class Home_Fragment extends Fragment {
 
     private ArrayList<Camnang> getListItem() {
         ArrayList<Camnang> list = new ArrayList<>();
-        list.add(new Camnang(1,  R.drawable.handbook, "Cẩm nang"));
-        list.add(new Camnang(2, R.drawable.notebook, "Nhật kí"));
-        list.add(new Camnang(3, R.drawable.baby, "Thông tin của con"));
-        list.add(new Camnang(4, R.drawable.schedule, "Lịch tiêm ngừa theo tháng"));
+        list.add(new Camnang(1,  R.drawable.handbook, "Cẩm nang",null));
+        list.add(new Camnang(2, R.drawable.notebook, "Nhật kí",null));
+        list.add(new Camnang(3, R.drawable.baby, "Thông tin của con",null));
+        list.add(new Camnang(4, R.drawable.schedule, "Lịch tiêm ngừa theo tháng",null));
 //
 
         return list;

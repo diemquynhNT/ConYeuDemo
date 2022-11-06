@@ -54,51 +54,5 @@ public class calendar_Activity extends AppCompatActivity {
 //            }
 //        });
 
-        txpush=findViewById(R.id.edtext);
-        btnpush=findViewById(R.id.btnpush);
-        btnget=findViewById(R.id.btnget);
-        text=findViewById(R.id.textget);
-        btnpush.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("name");
-
-                myRef.setValue(txpush.getText().toString().trim());
-            }
-        });
-
-        btnget.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               ReadDatabase();
-            }
-        });
-
-
-//
-  }
-
-  private void ReadDatabase(){
-      FirebaseDatabase database = FirebaseDatabase.getInstance();
-      DatabaseReference myRef = database.getReference("name");
-      // Read from the database
-      myRef.addValueEventListener(new ValueEventListener() {
-          @Override
-          //nhan du lieu
-          public void onDataChange(DataSnapshot dataSnapshot) {
-              // This method is called once with the initial value and again
-              // whenever data at this location is updated.
-              String value = dataSnapshot.getValue(String.class);
-              text.setText(value);
-          }
-
-
-          @Override
-          public void onCancelled(DatabaseError error) {
-              // Failed to read value
-
-          }
-      });
-  }
+    }
 }
