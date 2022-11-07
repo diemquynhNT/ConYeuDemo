@@ -12,23 +12,22 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.conyeu.DiaryActivity;
 import com.example.conyeu.DiaryMainActivity;
 import com.example.conyeu.R;
 import com.example.conyeu.calendar_Activity;
 import com.example.conyeu.object.Camnang;
 import com.example.conyeu.camnang_Activity;
+import com.example.conyeu.object.ItemFunction;
 
 import java.util.ArrayList;
 
 public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
-    private Context mContext;
-    Camnang camnang;
-    private ArrayList<Camnang> Listcamnang;
+
+    private ArrayList<ItemFunction> Listitem;
     private Context context;
 
-    public itemadapter(ArrayList<Camnang> listcamnang, Context context) {
-        this.Listcamnang = listcamnang;
+    public itemadapter(ArrayList<ItemFunction> listitem, Context context) {
+        this.Listitem = listitem;
         this.context = context;
     }
 
@@ -43,22 +42,23 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
     @Override
     public void onBindViewHolder(@NonNull CamnangVH holder, int position) {
 
-        Camnang item=Listcamnang.get(position);
+        ItemFunction item=Listitem.get(position);
         if(item==null)
         {
             return;
         }
-        holder.imgitem.setImageResource(item.getImage_cn());
-        holder.txTitle.setText(item.getTitle());
+
+        holder.imgitem.setImageResource(item.getImg());
+        holder.txTitleitem.setText(item.getTitleitem());
         holder.layoutItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(item.getTitle()=="Thông báo")
+                if(item.getTitleitem()=="Thông báo")
                 {
 
                 }
-                else if (item.getTitle()=="Cẩm nang") {
+                else if (item.getTitleitem()=="Cẩm nang") {
                     Intent intent=new Intent(context, camnang_Activity.class);
 //                Bundle bundle=new Bundle();
 //                bundle.putSerializable("object_user",cn);
@@ -66,12 +66,12 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
                     context.startActivity(intent);
 
                 }
-                else if (item.getTitle()=="Nhật kí") {
+                else if (item.getTitleitem()=="Nhật kí") {
                     Intent intent=new Intent(context, DiaryMainActivity.class);
                     context.startActivity(intent);
 
                 }
-                else if (item.getTitle()=="Lịch tiêm ngừa theo tháng") {
+                else if (item.getTitleitem()=="Lịch tiêm ngừa theo tháng") {
                     Intent intent=new Intent(context, calendar_Activity.class);
                     context.startActivity(intent);
                 }
@@ -87,9 +87,9 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
 
     @Override
     public int getItemCount() {
-        if(Listcamnang!=null)
+        if(Listitem!=null)
         {
-            return Listcamnang.size();
+            return Listitem.size();
         }
         return 0;
     }
@@ -97,12 +97,12 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
 
     class CamnangVH extends RecyclerView.ViewHolder{
 
-        public TextView txTitle;
+        public TextView txTitleitem;
         public ImageView imgitem;
         public ConstraintLayout layoutItem;
         public CamnangVH(@NonNull View itemView) {
             super(itemView);
-            txTitle=itemView.findViewById(R.id.txtitle);
+            txTitleitem=itemView.findViewById(R.id.txtitleitem);
             imgitem=itemView.findViewById(R.id.imgitem);
             layoutItem=itemView.findViewById(R.id.layout_itemnew);
         }

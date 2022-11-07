@@ -4,51 +4,42 @@ import java.io.Serializable;
 
 public class Camnang implements Serializable {
         int id;
-        int image_cn;
-        String title;
-        String content;
-//
-        public Camnang(int id, int image_cn, String title,String content) {
-            this.id = id;
-            this.image_cn = image_cn;
-            this.title = title;
-            this.content=content;
-        }
+//        int image_cn;
+        String titlecn;
+        String contentcn;
 
-    public Camnang(int id, int handbook, String cẩm_nang) {
-    }
+        public Camnang(){}
 
-    public String getContent() {
-        return content;
-    }
 
-    public void setContent(String content) {
-        this.content = content;
+    public Camnang(int id, String titlecn, String contentcn) {
+        this.id = id;
+        this.titlecn = titlecn;
+        this.contentcn = contentcn;
     }
 
     public int getId() {
-            return id;
-        }
-
-        public int getImage_cn() {
-            return image_cn;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public void setImage_cn(int image_cn) {
-            this.image_cn = image_cn;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
+        return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitlecn() {
+        return titlecn;
+    }
+
+    public void setTitlecn(String titlecn) {
+        this.titlecn = titlecn;
+    }
+
+    public String getContentcn() {
+        return contentcn;
+    }
+
+    public void setContentcn(String contentcn) {
+        this.contentcn = contentcn;
+    }
+}
 
 
