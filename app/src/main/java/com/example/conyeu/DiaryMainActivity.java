@@ -1,9 +1,5 @@
 package com.example.conyeu;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +7,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -23,11 +17,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.conyeu.Adapter.BabyAdapter;
 import com.example.conyeu.Adapter.DiaryAdapter;
+import com.example.conyeu.fragment_nav.Home_Fragment;
 import com.example.conyeu.object.Diary;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;
@@ -35,10 +30,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DiaryMainActivity extends AppCompatActivity  {
 
@@ -47,28 +40,17 @@ public class DiaryMainActivity extends AppCompatActivity  {
     private ArrayList<Diary> mListDiary;
     Button btnupdatediary,btncanceldiary;
     FloatingActionButton btnAdddiary;
-    EditText edtnewtitle,ednewcontent,edtnewdate;
+    EditText ednewcontent;
+    ImageButton btnbacktohome;
+    TextView txtitlediary;
 
-//    ActivityResultLauncher<Intent> mLauncher = registerForActivityResult(
-//            new ActivityResultContracts.StartActivityForResult(),
-//            new ActivityResultCallback<ActivityResult>() {
-//                @Override
-//                public void onActivityResult(ActivityResult result) {
-//                    if (result.getResultCode() == RESULT_OK) {
-//                        if (result.getData().getIntExtra("flag", 0) == 1) {
-//                            Phone phones = (Phone) result.getData().getSerializableExtra("contact");
-//                            phoneAdapter.addContact(phones);
-//                        }
-//                    }
-//                }
-//            }
-//    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary_main);
 
+        // do recyclerview
         rcvdiary=findViewById(R.id.rcv_diary);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         rcvdiary.setLayoutManager(linearLayoutManager);
@@ -76,6 +58,7 @@ public class DiaryMainActivity extends AppCompatActivity  {
         DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         rcvdiary.addItemDecoration(dividerItemDecoration);
 
+        //do du lieu vao
         mListDiary=new ArrayList<>();
         mDiaryAdapter =new DiaryAdapter(mListDiary, this, new DiaryAdapter.Listener() {
             @Override
@@ -86,8 +69,10 @@ public class DiaryMainActivity extends AppCompatActivity  {
         });
         rcvdiary.setAdapter(mDiaryAdapter);
 
+        //lay du lieu tu realtime
         getListDiaryDB();
 
+        // btn them diary
         btnAdddiary=findViewById(R.id.btn_fladdDiary);
         btnAdddiary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,31 +82,26 @@ public class DiaryMainActivity extends AppCompatActivity  {
             }
         });
 
+        btnbacktohome=findViewById(R.id.btntohomediary);
+        btnbacktohome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(DiaryMainActivity.this, Home_Fragment.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
     }
 
+    //lay du lieu tu lít tren realtime
     private void getListDiaryDB(){
         FirebaseDatabase database=FirebaseDatabase.getInstance();
         DatabaseReference myRef =database.getReference("list_diary");
 
-//        myRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for(DataSnapshot dataSnapshot:snapshot.getChildren())
-//                {
-//                    Diary diary=dataSnapshot.getValue(Diary.class);
-//                    mListDiary.add(diary);
-//                }
-//                mDiaryAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
+        //cach nhay vao tung con
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
@@ -170,6 +150,7 @@ public class DiaryMainActivity extends AppCompatActivity  {
 
     }
 
+    //nhan vao mo xem content chi tiet va sua
     private void openDialogUpdate(Diary diary)
     {
         //khai bao diaglog
@@ -183,16 +164,15 @@ public class DiaryMainActivity extends AppCompatActivity  {
         dialog.setCancelable(false);
 
         //set cac du lieu cu len
-//        edtnewtitle=dialog.findViewById(R.id.edt_updatetitlediary);
+        txtitlediary=dialog.findViewById(R.id.txTitleDiary);
         ednewcontent=dialog.findViewById(R.id.edt_updatecontentdiary);
-//        edtnewdate=dialog.findViewById(R.id.edt_updatedatediary);
 
         btncanceldiary=dialog.findViewById(R.id.btnCancel);
         btnupdatediary=dialog.findViewById(R.id.btnUpdateDiary);
 
-//        edtnewtitle.setText(diary.getTitle());
+        txtitlediary.setText(diary.getTitle());
         ednewcontent.setText(diary.getContentdiary());
-//        edtnewdate.setText(diary.getDatediary());
+
 
         btncanceldiary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -201,6 +181,7 @@ public class DiaryMainActivity extends AppCompatActivity  {
             }
         });
 
+        //btn update
         btnupdatediary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -208,11 +189,11 @@ public class DiaryMainActivity extends AppCompatActivity  {
                 DatabaseReference myRef=database.getReference("list_diary");
                 // tro toi cho sua
                 String newcontent=ednewcontent.getText().toString();
-                diary.setTitle(newcontent);
+                diary.setContentdiary(newcontent);
                 myRef.child(String.valueOf(diary.getTitle())).updateChildren(diary.toMap(), new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                        Toast.makeText(DiaryMainActivity.this,"Update sussce",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DiaryMainActivity.this,"Cập nhật thành công",Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
                     }
                 });

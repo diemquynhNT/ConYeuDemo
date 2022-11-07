@@ -3,14 +3,20 @@
     android:id="@+id/linearLayoutDiary"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_margin="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/boxedit"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/tx_titlediary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="titlet">
+        android:text="@string/tieude"
+        android:textSize="20sp"
+        android:textStyle="bold">
 
     </TextView>
 
@@ -18,8 +24,9 @@
         android:id="@+id/tx_datediary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="title: monday">
+        android:layout_margin="5sp"
+        android:text="@string/datediary"
+        android:textSize="16sp">
 
     </TextView>
 

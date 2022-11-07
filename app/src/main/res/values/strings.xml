@@ -2,6 +2,8 @@
     <string name="app_name">CON YÊU</string>
     <string name="slogan">For a better tomorrow</string>
     <string name="add">Thêm</string>
+    <string name="delete">Xóa</string>
+    <string name="update">Cập nhật</string>
     //nav
     <string name="nav_canhan">Cá nhân</string>
     <string name="nav_thongbao">Thông báo</string>
@@ -36,11 +38,9 @@
 
     //nhatki
     <string name="txtaonhatki">Tạo nhật kí</string>
-    <string name="txtieude">Tiêu đề</string>
     <string name="noidung">Nội dung</string>
-    <string name="txchooseimg">Chọn một tấm ảnh (Có thể bỏ qua)</string>
-    <string name="txnoidung">Nội dung muốn ghi nhớ</string>
     <string name="tieude">Tiêu đề</string>
+    <string name="datediary">Ngày viết</string>
 
     //Lich
     <string name="empty_calender">Không có lịch</string>

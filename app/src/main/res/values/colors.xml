@@ -9,11 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Violet">#fee9e1</color>
     <color name="blue">#44aecb</color>
+    <color name="blue2">#D4DDE3</color>
 
 
     <color name="pink1">#FED7DD</color>
     <color name="pink_violet">#FFC5CE</color>
     <color name="pink2">#FFACBB</color>
+    <color name="pink3">#FFE9E3</color>
 
 
     <color name="blue1">#C2F2F6</color>

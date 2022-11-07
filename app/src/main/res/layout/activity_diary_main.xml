@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/layout"
     android:orientation="vertical"
     tools:context=".DiaryMainActivity">
 
@@ -19,15 +20,15 @@
             android:id="@+id/toolbar_calendar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/pink_violet"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         </Toolbar>
+
         <ImageButton
-            android:id="@+id/btnBackhome"
+            android:id="@+id/btntohomediary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/pink_violet"
@@ -40,20 +41,16 @@
             android:id="@+id/txtitlecalender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/nav_nhatki"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar_calendar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnBackhome"
+            app:layout_constraintStart_toEndOf="@+id/btntohomediary"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -73,7 +70,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        app:backgroundTint="@color/pink1"
+        app:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_add_24" />

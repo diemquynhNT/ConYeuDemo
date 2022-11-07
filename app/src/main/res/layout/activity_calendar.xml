@@ -46,7 +46,7 @@
         android:contentDescription="TODO" />
 
     <ImageButton
-        android:id="@+id/btnBackhome"
+        android:id="@+id/btntohomediary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/pink_violet"
@@ -65,7 +65,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar_calendar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnBackhome"
+        app:layout_constraintStart_toEndOf="@+id/btntohomediary"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
