@@ -142,7 +142,7 @@ public class chuacocon_Fragment extends Fragment {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
+//
                 for(DataSnapshot datasnapshot: snapshot.getChildren())
                 {
                     Camnang cn=datasnapshot.getValue(Camnang.class);
