@@ -29,15 +29,15 @@ public class Home_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-//        view = inflater.inflate(R.layout.fragment_home_, container, false);
-//
-//        mRecyclerView = view.findViewById(R.id.rvchuacocon);
-//        adapteritem = new itemadapter(getListItem(), view.getContext());
-//
-//        GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 2);
-//        mRecyclerView.setLayoutManager(gridLayoutManager);
-////       camnangAdapter.setData(getListUser());
-//        mRecyclerView.setAdapter(Itemadapter);
+        view = inflater.inflate(R.layout.fragment_home_, container, false);
+
+        mRecyclerView = view.findViewById(R.id.rvchuacocon);
+        adapteritem = new itemadapter(getListItem(), view.getContext());
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 2);
+        mRecyclerView.setLayoutManager(gridLayoutManager);
+//       camnangAdapter.setData(getListUser());
+        mRecyclerView.setAdapter(adapteritem);
 
 
 
@@ -47,14 +47,14 @@ public class Home_Fragment extends Fragment {
 
 
 
-//    private ArrayList<ItemFunction> getListItem() {
-//        ArrayList<ItemFunction> list = new ArrayList<>();
-//        list.add(new Camnang(1,R.drawable.notebook, "Cẩm nang"));
-//        list.add(new Camnang(2, R.drawable.notebook, "Nhật kí"));
-//        list.add(new Camnang(3, R.drawable.baby, "Thông tin của con");
-//        list.add(new Camnang(4, R.drawable.schedule, "Lịch tiêm ngừa theo tháng");
-////
+    private ArrayList<ItemFunction> getListItem() {
+        ArrayList<ItemFunction> list = new ArrayList<>();
+        list.add(new ItemFunction(1,R.drawable.notebook, "Cẩm nang"));
+        list.add(new ItemFunction(2, R.drawable.notebook, "Nhật kí"));
+        list.add(new ItemFunction(3, R.drawable.baby, "Thông tin của con"));
+        list.add(new ItemFunction(4, R.drawable.schedule, "Lịch tiêm ngừa theo tháng"));
 //
-//        return list;
-//    }
+
+        return list;
+    }
 }

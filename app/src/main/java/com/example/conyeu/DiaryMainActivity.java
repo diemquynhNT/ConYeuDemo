@@ -30,10 +30,10 @@ import java.util.List;
 
 public class DiaryMainActivity extends AppCompatActivity {
 
-    private RecyclerView rcvdiary;
-    private DiaryAdapter mDiaryAdapter;
-    private ArrayList<Diary> mListDiary;
-    FloatingActionButton btnAdddiary;
+//    private RecyclerView rcvdiary;
+//    private DiaryAdapter mDiaryAdapter;
+//    private ArrayList<Diary> mListDiary;
+//    FloatingActionButton btnAdddiary;
 
 //    ActivityResultLauncher<Intent> mLauncher = registerForActivityResult(
 //            new ActivityResultContracts.StartActivityForResult(),
@@ -55,52 +55,52 @@ public class DiaryMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary_main);
 
-        rcvdiary=findViewById(R.id.rcv_diary);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
-        rcvdiary.setLayoutManager(linearLayoutManager);
-
-        DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
-        rcvdiary.addItemDecoration(dividerItemDecoration);
-
-        mListDiary=new ArrayList<>();
-        mDiaryAdapter =new DiaryAdapter(mListDiary);
-        rcvdiary.setAdapter(mDiaryAdapter);
-
-        getListDiaryDB();
-
-        btnAdddiary=findViewById(R.id.btn_fladdDiary);
-        btnAdddiary.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(DiaryMainActivity.this,DiaryActivity.class);
-                startActivity(intent);
-            }
-        });
+//        rcvdiary=findViewById(R.id.rcv_diary);
+//        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+//        rcvdiary.setLayoutManager(linearLayoutManager);
+//
+//        DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
+//        rcvdiary.addItemDecoration(dividerItemDecoration);
+//
+//        mListDiary=new ArrayList<>();
+//        mDiaryAdapter =new DiaryAdapter(mListDiary);
+//        rcvdiary.setAdapter(mDiaryAdapter);
+//
+//        getListDiaryDB();
+//
+//        btnAdddiary=findViewById(R.id.btn_fladdDiary);
+//        btnAdddiary.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(DiaryMainActivity.this,DiaryActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
 
-    private void getListDiaryDB(){
-        FirebaseDatabase database=FirebaseDatabase.getInstance();
-        DatabaseReference myRef =database.getReference("list_diary");
-
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren())
-                {
-                    Diary diary=dataSnapshot.getValue(Diary.class);
-                    mListDiary.add(diary);
-                }
-                mDiaryAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
+//    private void getListDiaryDB(){
+//        FirebaseDatabase database=FirebaseDatabase.getInstance();
+//        DatabaseReference myRef =database.getReference("list_diary");
+//
+//        myRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                for(DataSnapshot dataSnapshot:snapshot.getChildren())
+//                {
+//                    Diary diary=dataSnapshot.getValue(Diary.class);
+//                    mListDiary.add(diary);
+//                }
+//                mDiaryAdapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+//    }
 
 
 
