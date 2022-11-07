@@ -15,6 +15,7 @@ import java.util.List;
 
 public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
 
+    //
     List<Diary> mListDiary;
     private TextView txtitle_diary,txcontent_diary;
 
