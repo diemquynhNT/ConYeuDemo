@@ -15,6 +15,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DiaryActivity extends AppCompatActivity {
 
    EditText edtcontent,edttitle,edid;
@@ -23,28 +26,45 @@ public class DiaryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
-        initUI();
+
+        edttitle=findViewById(R.id.edAddDiary);
+        edtcontent=findViewById(R.id.edtAddcontent);
+
+        edid=findViewById(R.id.edt_id);
+
+        btnAddDiary=findViewById(R.id.add_diary);
 
         btnAddDiary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int id=Integer.parseInt(edid.getText().toString().trim());
-                String content=edtcontent.getText().toString().trim();
-                String title=edttitle.getText().toString().trim();
 
-                Diary diary= new Diary(id,title,content);
-                onClickAtDiary(diary);
+
+
+
+//                pushdata();
+
+
             }
         });
 
 
     }
 
+    private void pushdata() {
+        FirebaseDatabase database=FirebaseDatabase.getInstance();
+        DatabaseReference myRef=database.getReference("list_diary");
+
+        String title=edttitle.getText().toString();
+        String content=edtcontent.getText().toString();
+
+        Diary diary=new Diary(title,content);
+        myRef.push().setValue(diary);
+
+
+    }
+
     private void initUI(){
-        edttitle=findViewById(R.id.edAddDiary);
-        edtcontent=findViewById(R.id.edtAddcontent);
-        btnAddDiary=findViewById(R.id.add_diary);
-        edid=edttitle=findViewById(R.id.edt_id);
+
 
 
     }
@@ -55,6 +75,7 @@ public class DiaryActivity extends AppCompatActivity {
         DatabaseReference myRef=database.getReference("list_diary");
 
         String pathObject=String.valueOf(diary.getId());
+
         myRef.child(pathObject).setValue(diary, new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
@@ -72,5 +93,8 @@ public class DiaryActivity extends AppCompatActivity {
 //
 //
     }
+
+
+
 
 }

@@ -1,7 +1,7 @@
 package com.example.conyeu.object;
 
 public class Diary {
-    int id;
+ int id=0;
     private String contentdiary;
     private String title;
 
@@ -9,8 +9,8 @@ public class Diary {
 
     }
 
-    public Diary(int id, String title,String contentdiary) {
-        this.id=id;
+    public Diary( String title,String contentdiary) {
+//        this.id=id;
 
         this.title = title;
         this.contentdiary = contentdiary;
