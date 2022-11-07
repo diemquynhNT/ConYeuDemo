@@ -9,10 +9,12 @@ public class Diary {
 
     }
 
-    public Diary(String contentdiary, String title,int id) {
-        this.contentdiary = contentdiary;
-        this.title = title;
+    public Diary(int id, String title,String contentdiary) {
         this.id=id;
+
+        this.title = title;
+        this.contentdiary = contentdiary;
+
     }
 
     public int getId() {

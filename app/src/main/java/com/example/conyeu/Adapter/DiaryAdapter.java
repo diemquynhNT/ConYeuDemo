@@ -17,7 +17,7 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
 
 
     List<Diary> mListDiary;
-    private TextView txtitle_diary,txcontent_diary;
+//    TextView txtitle_diary,txcontent_diary;
 
     public DiaryAdapter(List<Diary> mListDiary) {
         this.mListDiary = mListDiary;
@@ -36,8 +36,10 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
         Diary diary=mListDiary.get(position);
         if(diary==null)
             return;
-        holder.txcontent_diary.setText(diary.getContentdiary());
+//        holder.txiddiary.setText(diary.getId());
         holder.txtitle_diary.setText(diary.getTitle());
+        holder.txcontent_diary.setText(diary.getContentdiary());
+
 
     }
 
@@ -52,12 +54,13 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
 
     protected class DiaryVH extends RecyclerView.ViewHolder{
 
-        private TextView txcontentdiary,txtitle_diary,txcontent_diary;
+        private TextView txiddiary,txtitle_diary,txcontent_diary;
 
         public DiaryVH(@NonNull View itemView) {
             super(itemView);
-            txcontentdiary=itemView.findViewById(R.id.tx_contentdiary);
+            txcontent_diary=itemView.findViewById(R.id.tx_contentdiary);
             txtitle_diary=itemView.findViewById(R.id.tx_titlediary);
+//            txiddiary=itemView.findViewById(R.id.tx_iddiary);
 
         }
     }
