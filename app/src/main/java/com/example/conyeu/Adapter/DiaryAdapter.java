@@ -21,7 +21,7 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
     public DiaryAdapter(List<Diary> mListDiary) {
         this.mListDiary = mListDiary;
     }
-
+//
     @NonNull
     @Override
     public DiaryVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
