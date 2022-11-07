@@ -137,7 +137,7 @@ public class chuacocon_Fragment extends Fragment {
 
     public void getListDB(){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("list_user");
+        DatabaseReference myRef = database.getReference("Camnang/Chuacocon");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -45,8 +45,9 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
             return;
         }
 //        holder.Img_Camnang.setImageResource(cn.getImage_cn());
-        holder.txTitle.setText("ID"+cn.getTitle());
-        holder.txcontent.setText(cn.getContent());
+//        holder.txTitle.setText("ID"+cn.getTitle());
+//        holder.txcontent.setText(cn.getContent());
+//
 //        holder.layoutItem.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

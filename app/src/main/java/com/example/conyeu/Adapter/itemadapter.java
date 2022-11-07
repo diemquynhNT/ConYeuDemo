@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conyeu.DiaryActivity;
+import com.example.conyeu.DiaryMainActivity;
 import com.example.conyeu.R;
 import com.example.conyeu.calendar_Activity;
 import com.example.conyeu.object.Camnang;
@@ -66,7 +67,7 @@ public class itemadapter extends RecyclerView.Adapter<itemadapter.CamnangVH> {
 
                 }
                 else if (item.getTitle()=="Nhật kí") {
-                    Intent intent=new Intent(context, DiaryActivity.class);
+                    Intent intent=new Intent(context, DiaryMainActivity.class);
                     context.startActivity(intent);
 
                 }
