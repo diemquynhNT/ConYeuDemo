@@ -146,7 +146,7 @@ public class chuacocon_Fragment extends Fragment {
                 for(DataSnapshot datasnapshot: snapshot.getChildren())
                 {
 //                    Camnang cn=datasnapshot.getValue(Camnang.class);
-//                    Listcamnang.add(cn);
+//                    Listcamnang.add(cn);//
                 }
                 camnangAdapter.notifyDataSetChanged();
 
