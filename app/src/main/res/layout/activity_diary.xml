@@ -7,14 +7,7 @@
     tools:context=".DiaryActivity"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edt_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="id">
 
-    </EditText>
 
     <EditText
         android:id="@+id/edAddDiary"
@@ -31,6 +24,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="content">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/edt_datediary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="date">
 
     </EditText>
 

@@ -15,7 +15,7 @@ import com.example.conyeu.object.Baby;
 import com.example.conyeu.Adapter.BabyAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-public class InfoDialogBottomSheet extends BottomSheetDialog {
+public class  InfoDialogBottomSheet extends BottomSheetDialog {
     TextView txFullName, txNickname, txHeight, txWeight,txBirthday;
     ImageView imImage;
     ImageButton btnClose, btnEdit, btnDelete;

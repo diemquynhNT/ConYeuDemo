@@ -27,11 +27,11 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.BabyVH> implem
     private ArrayList<Baby> babysFilter;
 
     private Context context;
-    Listener listener;
+//    Listener listener;
 
-    public BabyAdapter(ArrayList<Baby> babys,Listener listener) {
+    public BabyAdapter(ArrayList<Baby> babys) {
         this.babys = babys;
-        this.listener=listener;
+//        this.listener=listener;
         this.babysFilter=babys;
 
     }
@@ -64,7 +64,7 @@ public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.BabyVH> implem
 ////                bundle.putSerializable("object_user",cn);
 ////                intent.putExtras(bundle);
 //                context.startActivity(intent);
-                listener.onItemListener(cn);
+//                listener.onItemListener(cn);
 //
 
 

@@ -1,8 +1,10 @@
 package com.example.conyeu.Adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,10 +19,18 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
 
 
     List<Diary> mListDiary;
+    Context context;
 //    TextView txtitle_diary,txcontent_diary;
+   //interface
+    Listener listener;
 
-    public DiaryAdapter(List<Diary> mListDiary) {
+
+    public DiaryAdapter(List<Diary> mListDiary,Context context,Listener listener) {
+
         this.mListDiary = mListDiary;
+        this.listener=listener;
+        this.context=context;
+        
     }
 
     @NonNull
@@ -38,8 +48,35 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
             return;
 
         holder.txtitle_diary.setText(diary.getTitle());
-        holder.txcontent_diary.setText(diary.getContentdiary());
-        holder.txiddiary.setText(diary.getTitle());
+//        holder.txcontent_diary.setText(diary.getContentdiary());
+        holder.txdatediary.setText(diary.getDatediary());
+        holder.linearLayoutDiary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//                builder.setTitle("Contact");
+//                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//                        dialogInterface.dismiss();
+//                    }
+//                });
+//                AlertDialog alertDialog = builder.create();
+//                alertDialog.show();
+                listener.onClickUpdateiary(diary);
+
+
+
+            }
+        });
+
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                listener.onItemListener(position,phone);
+//                listener.onItemListener(diary);
+//            }
+//        });
 
 
     }
@@ -53,16 +90,22 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
         return 0;
     }
 
-    protected class DiaryVH extends RecyclerView.ViewHolder{
+    public class DiaryVH extends RecyclerView.ViewHolder{
 
-        private TextView txiddiary,txtitle_diary,txcontent_diary;
+        TextView txdatediary,txtitle_diary,txcontent_diary;
+        LinearLayout linearLayoutDiary;
 
         public DiaryVH(@NonNull View itemView) {
             super(itemView);
-            txcontent_diary=itemView.findViewById(R.id.tx_contentdiary);
+//            txcontent_diary=itemView.findViewById(R.id.tx_titlediary);
             txtitle_diary=itemView.findViewById(R.id.tx_titlediary);
-            txiddiary=itemView.findViewById(R.id.tx_iddiary);
+            txdatediary=itemView.findViewById(R.id.tx_datediary);
+            linearLayoutDiary=itemView.findViewById(R.id.linearLayoutDiary);
+            
 
         }
+    }
+    public interface Listener{
+        void onClickUpdateiary(Diary diary);
     }
 }
