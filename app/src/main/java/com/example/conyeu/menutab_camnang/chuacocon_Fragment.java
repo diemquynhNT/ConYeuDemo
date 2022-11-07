@@ -40,7 +40,7 @@ public class chuacocon_Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private Object LinearLayoutManager;
+
 
     public chuacocon_Fragment() {
         // Required empty public constructor
@@ -137,7 +137,7 @@ public class chuacocon_Fragment extends Fragment {
 
     public void getListDB(){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Camnang/Chuacocon");
+        DatabaseReference myRef = database.getReference("Chuacocon");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -145,8 +145,8 @@ public class chuacocon_Fragment extends Fragment {
 
                 for(DataSnapshot datasnapshot: snapshot.getChildren())
                 {
-//                    Camnang cn=datasnapshot.getValue(Camnang.class);
-//                    Listcamnang.add(cn);
+                    Camnang cn=datasnapshot.getValue(Camnang.class);
+                    Listcamnang.add(cn);
                 }
                 camnangAdapter.notifyDataSetChanged();
 

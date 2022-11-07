@@ -23,54 +23,54 @@ public class DiaryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
-        initUI();
-
-        btnAddDiary.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int id=Integer.parseInt(edid.getText().toString().trim());
-                String content=edtcontent.getText().toString().trim();
-                String title=edttitle.getText().toString().trim();
-
-                Diary diary= new Diary(content,title,id);
-                onClickAtDiary(diary);
-            }
-        });
-
-
-    }
-
-    private void initUI(){
-        edttitle=findViewById(R.id.edt_title);
-        edtcontent=findViewById(R.id.edt_content);
-        btnAddDiary=findViewById(R.id.add_diary);
-        edid=edttitle=findViewById(R.id.edt_id);
-
-
-    }
-
-    private void onClickAtDiary(Diary diary){
-
-        FirebaseDatabase database=FirebaseDatabase.getInstance();
-        DatabaseReference myRef=database.getReference("list_diary");
-
-        String pathObject=String.valueOf(diary.getId());
-        myRef.child(pathObject).setValue(diary, new DatabaseReference.CompletionListener() {
-            @Override
-            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                Toast.makeText(DiaryActivity.this,"Add succes",Toast.LENGTH_SHORT).show();
-            }
-        });
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("hello");
+//        initUI();
 //
-//        myRef.setValue("Hello, World!");
-
-
-
-
+//        btnAddDiary.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                int id=Integer.parseInt(edid.getText().toString().trim());
+//                String content=edtcontent.getText().toString().trim();
+//                String title=edttitle.getText().toString().trim();
+//
+//                Diary diary= new Diary(content,title,id);
+//                onClickAtDiary(diary);
+//            }
+//        });
 
 
     }
+
+//    private void initUI(){
+//        edttitle=findViewById(R.id.edt_title);
+//        edtcontent=findViewById(R.id.edt_content);
+//        btnAddDiary=findViewById(R.id.add_diary);
+//        edid=edttitle=findViewById(R.id.edt_id);
+//
+//
+//    }
+//
+//    private void onClickAtDiary(Diary diary){
+//
+//        FirebaseDatabase database=FirebaseDatabase.getInstance();
+//        DatabaseReference myRef=database.getReference("list_diary");
+//
+//        String pathObject=String.valueOf(diary.getId());
+//        myRef.child(pathObject).setValue(diary, new DatabaseReference.CompletionListener() {
+//            @Override
+//            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+//                Toast.makeText(DiaryActivity.this,"Add succes",Toast.LENGTH_SHORT).show();
+//            }
+//        });
+////        FirebaseDatabase database = FirebaseDatabase.getInstance();
+////        DatabaseReference myRef = database.getReference("hello");
+////
+////        myRef.setValue("Hello, World!");
+//
+//
+//
+//
+//
+//
+//    }
 
 }

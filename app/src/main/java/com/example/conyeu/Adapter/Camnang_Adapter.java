@@ -18,8 +18,6 @@ import java.util.ArrayList;
 
 public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.CamnangVH> {
 
-    private Context mContext;
-    Camnang camnang;
     private ArrayList<Camnang> Listcamnang;
     private Context context;
 
@@ -45,9 +43,9 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
             return;
         }
 //        holder.Img_Camnang.setImageResource(cn.getImage_cn());
-//        holder.txTitle.setText("ID"+cn.getTitle());
-//        holder.txcontent.setText(cn.getContent());
-//
+//        holder.txTitle.setText(cn.getTitlecn());
+//        holder.txcontent.setText(cn.getContentcn());
+
 //        holder.layoutItem.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -76,7 +74,7 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
 
         public TextView txTitle,txcontent;
 //        public ImageView Img_Camnang;
-//        public ConstraintLayout layoutItem;
+        public ConstraintLayout layoutItem;
         public CamnangVH(@NonNull View itemView) {
             super(itemView);
             txTitle=itemView.findViewById(R.id.txtitlecn);
