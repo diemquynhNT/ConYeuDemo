@@ -35,8 +35,8 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
         Diary diary=mListDiary.get(position);
         if(diary==null)
             return;
-//        holder.txcontent_diary.setText(diary.getContentdiary());
-//        holder.txtitle_diary.setText(diary.getTitle());
+        holder.txcontent_diary.setText(diary.getContentdiary());
+        holder.txtitle_diary.setText(diary.getTitle());
 
     }
 
