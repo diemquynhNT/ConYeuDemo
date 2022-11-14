@@ -17,13 +17,13 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new chuacocon_Fragment();
+                return new camnangcon_Fragment();
             case 1:
-                return new dangmangthai_Fragment();
+                return new camnangme_Fragment();
             case 3:
-                return new nuoicon_Fragment();
+                return new camnangfavorite_Fragment();
 
-            default: return new nuoicon_Fragment();
+            default: return new camnangfavorite_Fragment();
         }
     }
 
@@ -38,13 +38,13 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
         String title="";
         switch (position){
             case 0:
-                title="Chưa có con";
+                title="Cẩm nang cho con";
                 break;
             case 1:
-                title="Đang mang thai";
+                title="Cẩm nang cho mẹ";
                 break;
             case 2:
-                title="Nuôi con";
+                title="Yêu thích";
                 break;
 
         }

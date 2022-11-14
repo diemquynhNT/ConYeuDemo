@@ -10,91 +10,159 @@
     android:layout_marginEnd="16dp"
     tools:context=".AddeditBabyActivity">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/namebaby"
+        android:textSize="18sp" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/namebaby">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edcheckpass"
+            android:id="@+id/edt_namebaby"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Nguyễn Văn A" />
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtrangthai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giới tính"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/sp_sexbaby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/datasex"
+            android:textAlignment="textEnd">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/nickname"
+        android:textSize="18sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Bo"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/nickname">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edLastName"
+            android:id="@+id/edt_nickname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Vu" />
+            android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilHeight"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Chiều cao">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edHeight"
+        <TextView
+            android:id="@+id/ma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trạng Thái"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/sp_periodbaby"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberSigned"
-            android:text="0" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:entries="@array/data"
+            android:textAlignment="textEnd">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilweight"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        </Spinner>
+
+    </LinearLayout>
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/tilHeight"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:hint="Trạng Thái">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/edHeight"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="numberSigned"-->
+<!--            android:text="0" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/tilweight"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:hint="Cân nặng"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tilHeight"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tilHeight"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tilHeight">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/edweight"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="number"-->
+<!--            android:text="0" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <TextView
+        android:id="@+id/txperiodbb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Cân nặng"
-        app:layout_constraintEnd_toEndOf="@+id/tilHeight"
-        app:layout_constraintStart_toStartOf="@+id/tilHeight"
-        app:layout_constraintTop_toBottomOf="@+id/tilHeight">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edweight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:text="0" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="10dp"
+        android:text="@string/birthday"
+        android:textSize="18sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilBirthday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="16dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@+id/tilweight"
         app:layout_constraintStart_toStartOf="@+id/tilweight"
-        app:layout_constraintTop_toBottomOf="@+id/tilweight"
-        android:hint="Birthday">
+        app:layout_constraintTop_toBottomOf="@+id/tilweight">
 
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_Birthdaybaby"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:focusableInTouchMode="false"
-            android:id="@+id/edBirthday"
-            android:text="01/01/1980"/>
+            android:inputType="datetime" />
     </com.google.android.material.textfield.TextInputLayout>
 
 

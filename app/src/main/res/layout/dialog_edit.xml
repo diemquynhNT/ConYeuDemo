@@ -10,14 +10,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/txTitleDiary"
+        <EditText
+            android:id="@+id/edt_updatetitlediary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp"
+            android:hint="@string/tieude"
+            android:padding="12dp">
+
+        </EditText>
 
         <EditText
             android:id="@+id/edt_updatecontentdiary"

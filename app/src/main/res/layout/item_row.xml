@@ -11,6 +11,7 @@
         android:id="@+id/imgCamnang"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_margin="5dp"
         android:src="@drawable/ditruyen"
         app:civ_border_color="#3F51B5"
         app:civ_border_width="1dp"
@@ -18,24 +19,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtitlecn"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
+        android:layout_margin="9dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgCamnang"
-        app:layout_constraintTop_toBottomOf="@+id/txcontent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/txcontent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imgCamnang"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tx_titlecn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tx_contentcn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

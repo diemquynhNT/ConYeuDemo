@@ -10,50 +10,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/pink_violet">
-
-        <Toolbar
-            android:id="@+id/toolbar2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/pink_violet"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </Toolbar>
-
-        <ImageButton
-            android:id="@+id/btnBacktocalendar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/pink_violet"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
-        <TextView
-            android:id="@+id/txtitleitem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:text="@string/createcalender"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-            app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-            app:layout_constraintStart_toEndOf="@+id/btnBacktocalendar"
-            app:layout_constraintTop_toTopOf="@+id/toolbar2" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/TxnameUser"
+            android:id="@+id/txTitlecalendar"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,33 +27,33 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtnameparent"
+                android:id="@+id/edt_titlecalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilMainUser"
+            android:id="@+id/txMap"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/diachi"
-            app:layout_constraintEnd_toEndOf="@+id/TxnameUser"
-            app:layout_constraintStart_toStartOf="@+id/TxnameUser"
-            app:layout_constraintTop_toBottomOf="@+id/TxnameUser">
+            app:layout_constraintEnd_toEndOf="@+id/txTitlecalendar"
+            app:layout_constraintStart_toStartOf="@+id/txTitlecalendar"
+            app:layout_constraintTop_toBottomOf="@+id/txTitlecalendar">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edMailparent"
+                android:id="@+id/edt_mapcalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilSDT"
+            android:id="@+id/tx_note"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             android:layout_width="0dp"
@@ -101,30 +61,30 @@
             android:layout_marginTop="16dp"
             android:hint="@string/note"
 
-            app:layout_constraintEnd_toEndOf="@+id/tilMainUser"
-            app:layout_constraintStart_toStartOf="@+id/tilMainUser"
-            app:layout_constraintTop_toBottomOf="@+id/tilMainUser">
+            app:layout_constraintEnd_toEndOf="@+id/txMap"
+            app:layout_constraintStart_toStartOf="@+id/txMap"
+            app:layout_constraintTop_toBottomOf="@+id/txMap">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edSDTparent"
+                android:id="@+id/edt_notecalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txinput_time"
+            android:id="@+id/tx_timecalendar"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/time"
-            app:layout_constraintEnd_toEndOf="@+id/tilSDT"
-            app:layout_constraintStart_toStartOf="@+id/tilSDT"
-            app:layout_constraintTop_toBottomOf="@+id/tilSDT">
+            app:layout_constraintEnd_toEndOf="@+id/tx_note"
+            app:layout_constraintStart_toStartOf="@+id/tx_note"
+            app:layout_constraintTop_toBottomOf="@+id/tx_note">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edTime"
+                android:id="@+id/edTimecalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time" />
@@ -140,29 +100,18 @@
 
             android:layout_marginEnd="24dp"
             android:hint="@string/date"
-            app:layout_constraintEnd_toEndOf="@+id/txinput_time"
-            app:layout_constraintStart_toStartOf="@+id/txinput_time"
-            app:layout_constraintTop_toBottomOf="@+id/txinput_time">
+            app:layout_constraintEnd_toEndOf="@+id/tx_timecalendar"
+            app:layout_constraintStart_toStartOf="@+id/tx_timecalendar"
+            app:layout_constraintTop_toBottomOf="@+id/tx_timecalendar">
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edDay"
+                android:id="@+id/edDaycalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="false" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/btnUpdateUser"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:text="@string/add"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txinput_day">
-
-        </Button>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

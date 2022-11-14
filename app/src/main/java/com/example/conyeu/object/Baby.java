@@ -1,22 +1,39 @@
 package com.example.conyeu.object;
 
-public class Baby {
-    int id;
-    String namebaby;
-    String nickname;
-    int heightbaby;
-    int weightbaby;
-    String birthday;
+import java.io.Serializable;
 
-    public Baby(int id,String namebaby, String nickname, int heightbaby, int weightbaby, String birthday) {
+public class Baby implements Serializable,Comparable<Baby>{
+     public  int id;
+    public String namebaby,nickname,sexbaby,periodbaby,birthday;
+
+
+    public Baby(int id,String namebaby, String nickname, String sexbaby, String periodbaby, String birthday) {
+
         this.id=id;
         this.namebaby = namebaby;
         this.nickname = nickname;
-        this.heightbaby = heightbaby;
-        this.weightbaby = weightbaby;
+        this.sexbaby = sexbaby;
+        this.periodbaby = periodbaby;
         this.birthday = birthday;
     }
-//
+
+    //
+
+    public String getSexbaby() {
+        return sexbaby;
+    }
+
+    public void setSexbaby(String sexbaby) {
+        this.sexbaby = sexbaby;
+    }
+
+    public String getPeriodbaby() {
+        return periodbaby;
+    }
+
+    public void setPeriodbaby(String periodbaby) {
+        this.periodbaby = periodbaby;
+    }
 
     public int getId() {
         return id;
@@ -34,14 +51,6 @@ public class Baby {
         return nickname;
     }
 
-    public int getHeightbaby() {
-        return heightbaby;
-    }
-
-    public int getWeightbaby() {
-        return weightbaby;
-    }
-
     public String getBirthday() {
         return birthday;
     }
@@ -54,15 +63,12 @@ public class Baby {
         this.nickname = nickname;
     }
 
-    public void setHeightbaby(int heightbaby) {
-        this.heightbaby = heightbaby;
-    }
-
-    public void setWeightbaby(int weightbaby) {
-        this.weightbaby = weightbaby;
-    }
-
     public void setBirthday(String birthday) {
         this.birthday = birthday;
+    }
+
+    @Override
+    public int compareTo(Baby o) {
+        return 0;
     }
 }

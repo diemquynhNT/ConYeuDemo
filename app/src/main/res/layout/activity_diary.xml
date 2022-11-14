@@ -4,55 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/layout1"
     android:gravity="center|top|center_vertical"
     android:orientation="vertical"
     tools:context=".DiaryActivity">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Toolbar
-            android:id="@+id/toolbar_calendar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </Toolbar>
-
-        <TextView
-            android:id="@+id/txtitlecalender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:text="@string/txtaonhatki"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/toolbar_calendar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imgbtn_todiary"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/imgbtn_todiary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:background="@color/blue1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <EditText
@@ -66,6 +20,7 @@
 
     </EditText>
 
+
     <EditText
         android:id="@+id/edtAddcontent"
         android:layout_width="match_parent"
@@ -77,28 +32,4 @@
 
     </EditText>
 
-    <EditText
-        android:id="@+id/edt_datediary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:hint="@string/datediary"
-        android:inputType="date">
-
-    </EditText>
-
-    <Button
-        android:id="@+id/add_diary"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="@string/add"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="normal">
-
-    </Button>
 </LinearLayout>

@@ -51,7 +51,7 @@ public class Home_Fragment extends Fragment {
         list.add(new ItemFunction(1,R.drawable.handbook, "Cẩm nang"));
         list.add(new ItemFunction(2, R.drawable.notebook, "Nhật kí"));
         list.add(new ItemFunction(3, R.drawable.baby, "Thông tin của con"));
-        list.add(new ItemFunction(4, R.drawable.schedule, "Lịch tiêm ngừa theo tháng"));
+        list.add(new ItemFunction(4, R.drawable.schedule, "Lịch tiêm ngừa"));
 //
 
         return list;

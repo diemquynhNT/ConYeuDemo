@@ -63,7 +63,7 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
 //                });
 //                AlertDialog alertDialog = builder.create();
 //                alertDialog.show();
-                listener.onClickUpdateiary(diary);
+                listener.onClickListenerDiary(diary);
 
 
 
@@ -106,6 +106,6 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
         }
     }
     public interface Listener{
-        void onClickUpdateiary(Diary diary);
+        void onClickListenerDiary(Diary diary);
     }
 }

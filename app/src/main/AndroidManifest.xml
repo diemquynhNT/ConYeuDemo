@@ -4,6 +4,7 @@
     package="com.example.conyeu">
 
     <application
+        android:name=".SQLite.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,6 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ConYeu"
         tools:targetApi="31">
+        <activity
+            android:name=".BMI_DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BmiList_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailCamnang_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".AddeditCalendarActivity"
+            android:exported="false" />
         <activity
             android:name=".DiaryMainActivity"
             android:exported="false" />
@@ -29,16 +42,10 @@
             android:name=".camnang_Activity"
             android:exported="false" />
         <activity
-            android:name=".create.createcalendar_Activity"
+            android:name=".CalendarMainActivity"
             android:exported="false" />
         <activity
-            android:name=".calendar_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Login_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".SignUpActivity"
+            android:name=".create.AddEditCalendarActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

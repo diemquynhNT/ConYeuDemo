@@ -11,7 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittoolbar"
+        android:background="@color/blue"
         android:orientation="horizontal">
 
 
@@ -42,14 +42,6 @@
             android:src="@drawable/ic_baseline_create_24"
             app:tint="@android:color/white" />
 
-        <ImageButton
-            android:id="@+id/deleteBtn"
-            android:layout_width="?attr/actionBarSize"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_baseline_delete_24"
-            app:tint="@android:color/white" />
-
 
     </LinearLayout>
 
@@ -57,8 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp"
-        >
+        android:padding="15dp">
 
 
         <LinearLayout
@@ -73,7 +64,8 @@
                 android:id="@+id/userImage"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
-                app:srcCompat="@drawable/baby" />
+                android:background="@drawable/baby"
+                 />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -116,7 +108,6 @@
             </LinearLayout>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -129,76 +120,6 @@
                 android:layout_height="1dp"
                 android:background="#e6e6e6" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/profilenickLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-
-            <ImageView
-                android:id="@+id/usernickImage"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                app:srcCompat="@drawable/feedingbottle" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:orientation="vertical">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/fullNickname"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/nickname"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/nickname"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#e6e6e6" />
-        </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -211,9 +132,7 @@
             <ImageButton
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/height" />
-
+                android:background="@drawable/feedingbottle" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -236,17 +155,17 @@
 
 
                         <TextView
-                            android:id="@+id/txheight"
+                            android:id="@+id/txnickname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="@string/nickname"
                             android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                         <TextView
-                            android:id="@+id/typeOfheight"
+                            android:id="@+id/typeOfNumber1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/heightbaby"
+                            android:text="@string/nickname"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
                     </LinearLayout>
@@ -284,7 +203,7 @@
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/weight" />
+                android:src="@drawable/sex" />
 
 
             <LinearLayout
@@ -300,17 +219,17 @@
 
 
                     <TextView
-                        android:id="@+id/txweight"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/txsexbaby"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="@string/gioitinh"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                     <TextView
-                        android:id="@+id/typeOfweight"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/sexbabyType1"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/weightbaby"
+                        android:text="@string/gioitinh"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
 
@@ -334,7 +253,6 @@
                 android:layout_height="1dp"
                 android:background="#e6e6e6" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -344,7 +262,66 @@
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/birthday" />
+                android:src="@drawable/babygirl" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txperiodbaby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/periodbaby"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <TextView
+                        android:id="@+id/periodbabyType1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/periodbaby"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/birthday"
+               />
 
 
             <LinearLayout
@@ -365,6 +342,7 @@
                         android:id="@+id/txBirthday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/birthday"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
                     <TextView

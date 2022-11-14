@@ -1,33 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayoutDiary"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:layout_marginRight="10dp"
-    android:background="@drawable/boxedit"
     android:orientation="vertical"
     android:padding="10dp">
-
-    <TextView
-        android:id="@+id/tx_titlediary"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="@string/tieude"
-        android:textSize="20sp"
-        android:textStyle="bold">
+        android:layout_height="wrap_content">
 
-    </TextView>
 
-    <TextView
-        android:id="@+id/tx_datediary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5sp"
-        android:text="@string/datediary"
-        android:textSize="16sp">
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/diary" />
 
-    </TextView>
+
+        <TextView
+            android:id="@+id/tx_titlediary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/tieude"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tx_datediary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_marginTop="-5dp"
+            android:text="@string/datediary"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/tx_titlediary">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </LinearLayout>

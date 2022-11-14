@@ -1,19 +1,18 @@
 package com.example.conyeu.object;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Diary {
- int id=0;
-    private String contentdiary;
-    private String title;
-    private String datediary;
+public class Diary implements Serializable {
 
-    public Diary(){
+    public int id;
+     public String contentdiary,title, datediary;
 
-    }
 
-    public Diary( String title,String contentdiary,String datediary) {
+
+    public Diary(int id, String title,String contentdiary,String datediary) {
+        this.id=id;
         this.title = title;
         this.contentdiary = contentdiary;
         this.datediary=datediary;
@@ -52,10 +51,10 @@ public class Diary {
         this.datediary = datediary;
     }
 
-    public Map<String,Object> toMap()
-    {
-        HashMap<String,Object> result=new HashMap<>();
-        result.put("content",contentdiary);
-        return result;
-    }
+//    public Map<String,Object> toMap()
+//    {
+//        HashMap<String,Object> result=new HashMap<>();
+//        result.put("content",contentdiary);
+//        return result;
+//    }
 }

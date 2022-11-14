@@ -12,9 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.conyeu.CalendarMainActivity;
 import com.example.conyeu.DiaryMainActivity;
 import com.example.conyeu.R;
-import com.example.conyeu.calendar_Activity;
 import com.example.conyeu.camnang_Activity;
 import com.example.conyeu.object.ItemFunction;
 
@@ -51,7 +51,7 @@ public class ItemFunctionAdapter extends RecyclerView.Adapter<ItemFunctionAdapte
             @Override
             public void onClick(View v) {
 
-                if(item.getTitleitem()=="Thông báo")
+                if(item.getTitleitem()=="")
                 {
 
                 }
@@ -68,8 +68,8 @@ public class ItemFunctionAdapter extends RecyclerView.Adapter<ItemFunctionAdapte
                     context.startActivity(intent);
 
                 }
-                else if (item.getTitleitem()=="Lịch tiêm ngừa theo tháng") {
-                    Intent intent=new Intent(context, calendar_Activity.class);
+                else if (item.getTitleitem()=="Lịch tiêm ngừa") {
+                    Intent intent=new Intent(context, CalendarMainActivity.class);
                     context.startActivity(intent);
                 }
 

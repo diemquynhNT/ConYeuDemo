@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,113 +16,105 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conyeu.R;
 import com.example.conyeu.object.Baby;
+import com.example.conyeu.object.Diary;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.BabyVH> implements Filterable {
+public class BabyAdapter extends RecyclerView.Adapter<BabyAdapter.BabyVH> {
 
-//    private Context mContext;
-//    Camnang camnang;
-    Baby baby;
-    private ArrayList<Baby> babys;
-    private ArrayList<Baby> babysFilter;
 
-    private Context context;
-//    Listener listener;
 
-    public BabyAdapter(ArrayList<Baby> babys) {
-        this.babys = babys;
-//        this.listener=listener;
-        this.babysFilter=babys;
+    ArrayList<Baby> mListBaby;
+    Context context;
+    Listener listener;
 
+    public BabyAdapter(ArrayList<Baby> mListBaby, Context context, Listener listener) {
+        this.mListBaby = mListBaby;
+        this.context = context;
+        this.listener = listener;
     }
 
     @NonNull
     @Override
     public BabyVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate((R.layout.listbaby),parent,false);
-
         return new BabyVH(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull BabyVH holder, int position) {
 
-        Baby cn =babysFilter.get(position);
-        if(cn==null)
+        Baby baby =mListBaby.get(position);
+        if(baby==null)
         {
             return;
         }
 
-        holder.txTitle.setText(cn.getNamebaby());
+        holder.txnamebaby.setText(baby.getNamebaby());
+        holder.txnicknamebbay.setText(baby.getNickname());
+//        holder.txsexbaby.setText(baby.getSexbaby());
+//        holder.txperiodbaby.setText(baby.getPeriodbaby());
+//        holder.txbirthdaybaby.setText(baby.getBirthday());
 
-        holder.layoutItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-//                Intent intent=new Intent(context,AddeditBabyActivity.class);
-////                Bundle bundle=new Bundle();
-////                bundle.putSerializable("object_user",cn);
-////                intent.putExtras(bundle);
-//                context.startActivity(intent);
-//                listener.onItemListener(cn);
-//
-
-
-
-            }
-        });
+       holder.layoutItembaby.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               listener.onItemBabyListener(baby);
+           }
+       });
     }
 
     @Override
     public int getItemCount() {
-        if(babys!=null)
+        if(mListBaby!=null)
         {
-            return babys.size();
+            return mListBaby.size();
         }
         return 0;
 
     }
 
-    @Override
-    public Filter getFilter() {
-        return null;
-    }
+
 
     class BabyVH extends RecyclerView.ViewHolder{
 
-        public TextView txTitle;
-        public ImageView Img_Camnang;
-        public ConstraintLayout layoutItem;
+        public TextView txnamebaby,txnicknamebbay,txsexbaby,txperiodbaby,txbirthdaybaby;
+//        public ImageView Img_Camnang;
+        public LinearLayout layoutItembaby;
 
         public BabyVH(@NonNull View itemView) {
             super(itemView);
-            txTitle=itemView.findViewById(R.id.txnamebaby);
+            txnamebaby=itemView.findViewById(R.id.tx_namebaby);
+            txnicknamebbay=itemView.findViewById(R.id.tx_nicknamebaby);
+//            txsexbaby=itemView.findViewById(R.id.tx_sexbaby);
+//            txperiodbaby=itemView.findViewById(R.id.tx_periodbaby);
+//            txbirthdaybaby=itemView.findViewById(R.id.tx_birthday);
 //            Img_Camnang=itemView.findViewById(R.id.imgCamnang);
-            layoutItem=itemView.findViewById(R.id.layoutlistbaby);
+            layoutItembaby=itemView.findViewById(R.id.layoutlistbaby);
         }
     }
 
-    public void addBaby(Baby baby){
-        babysFilter.add(baby);
-        notifyDataSetChanged();
-    }
-    public void editBaby(Baby baby, int pos){
-        babysFilter.set(pos, baby);
-        notifyDataSetChanged();
-    }
-
-    public void deleteContact(int pos){
-        babysFilter.remove(pos);
-        notifyDataSetChanged();
-    }
-
-    public void deleteContact(Baby babys){
-        babysFilter.remove(babys);
-        notifyDataSetChanged();
-    }
-    public interface Listener{
-        void onItemListener(Baby baby);
+//    public void addBaby(Baby baby){
+//        babysFilter.add(baby);
+//        notifyDataSetChanged();
+//    }
+//    public void editBaby(Baby baby, int pos){
+//        babysFilter.set(pos, baby);
+//        notifyDataSetChanged();
+//    }
+//
+//    public void deleteContact(int pos){
+//        babysFilter.remove(pos);
+//        notifyDataSetChanged();
+//    }
+//
+//    public void deleteContact(Baby babys){
+//        babysFilter.remove(babys);
+//        notifyDataSetChanged();
+//    }
+            public interface Listener{
+        void onItemBabyListener(Baby baby);
     }
 
 }
