@@ -83,10 +83,12 @@ public class DBHelper {
         SQLiteDatabase bmidb = openDBOption();
         String bmi = "CREATE TABLE IF NOT EXISTS BMI(" +
                 " id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                " height INTEGER," +
-                " weight INTEGER," +
-                " bmi INTEGER," +
-                " datebmi TEXT )" ;
+                " namebbbmi TEXT," +
+                " datebmi TEXT," +
+                " height TEXT," +
+                " weight TEXT," +
+                " bmi TEXT ,"+
+                " age TEXT )";
 
         bmidb.execSQL(bmi);
 
@@ -351,10 +353,12 @@ public class DBHelper {
 
         SQLiteDatabase db = openDBOption();
         ContentValues contentValues = new ContentValues();
+        contentValues.put("namebbbmi",bmi.getNamebbbmi());
+        contentValues.put("datebmi",bmi.getDatebmi());
         contentValues.put("height",bmi.getHeight() );
         contentValues.put("weight",bmi.getWeight());
         contentValues.put("bmi",bmi.getBmi());
-        contentValues.put("datebim",bmi.getDatebmi());
+        contentValues.put("age",bmi.getBmi());
 
         db.insert("BMI",null,contentValues);
         closeDB(db);
@@ -379,7 +383,7 @@ public class DBHelper {
         closeDB(db);
     }
 
-    //lay du lieu camnnag
+    //lay du lieu BMI
     public ArrayList<BMI> getBMI()
     {
         ArrayList<BMI> dsBMI = new ArrayList<BMI>();
@@ -390,12 +394,14 @@ public class DBHelper {
         while (!cursor.isAfterLast()){
 
             int id=cursor.getInt(0) ;
-            int height=cursor.getInt(1);
-            int weight=cursor.getInt(2);
-            int bmi=cursor.getInt(3);
-            String datebmi=cursor.getString(4);
+            String namebmi=cursor.getString(1);
+            String date=cursor.getString(2);
+            String height=cursor.getString(3);
+            String weight=cursor.getString(4);
+            String bmi=cursor.getString(5);
+            String agebaby=cursor.getString(5);
 
-            BMI bmis=new BMI(id,height,weight,bmi,datebmi);
+            BMI bmis=new BMI(id,namebmi,date,height,weight,bmi,agebaby);
             dsBMI.add(bmis);
 
             cursor.moveToNext();

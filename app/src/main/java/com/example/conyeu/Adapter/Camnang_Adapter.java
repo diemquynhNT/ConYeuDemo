@@ -3,6 +3,7 @@ package com.example.conyeu.Adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,6 @@ public class Camnang_Adapter extends  RecyclerView.Adapter<Camnang_Adapter.Camna
             return;
         }
         Bitmap bm= BitmapFactory.decodeByteArray(cn.imgcn,0,cn.imgcn.length);
-
         holder.Img_Camnang.setImageBitmap(bm);
         holder.tx_titlecn.setText(cn.getTitlecn());
         holder.tx_contentcn.setText(cn.getContentcn());

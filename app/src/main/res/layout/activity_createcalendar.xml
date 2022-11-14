@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
     android:orientation="vertical"
-    tools:context=".create.createcalendar_Activity">
+    tools:context=".AddeditCalendarActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txTitlecalendar"
+            android:id="@+id/tx1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,33 +26,33 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_titlecalendar"
+                android:id="@+id/edt_namebabybmi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txMap"
+            android:id="@+id/tx2"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/diachi"
-            app:layout_constraintEnd_toEndOf="@+id/txTitlecalendar"
-            app:layout_constraintStart_toStartOf="@+id/txTitlecalendar"
-            app:layout_constraintTop_toBottomOf="@+id/txTitlecalendar">
+            app:layout_constraintEnd_toEndOf="@+id/tx1"
+            app:layout_constraintStart_toStartOf="@+id/tx1"
+            app:layout_constraintTop_toBottomOf="@+id/tx1">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_mapcalendar"
+                android:id="@+id/edt_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tx_note"
+            android:id="@+id/tx3"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
             android:layout_width="0dp"
@@ -61,12 +60,12 @@
             android:layout_marginTop="16dp"
             android:hint="@string/note"
 
-            app:layout_constraintEnd_toEndOf="@+id/txMap"
-            app:layout_constraintStart_toStartOf="@+id/txMap"
-            app:layout_constraintTop_toBottomOf="@+id/txMap">
+            app:layout_constraintEnd_toEndOf="@+id/tx2"
+            app:layout_constraintStart_toStartOf="@+id/tx2"
+            app:layout_constraintTop_toBottomOf="@+id/tx2">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_notecalendar"
+                android:id="@+id/edt_note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
@@ -79,9 +78,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/time"
-            app:layout_constraintEnd_toEndOf="@+id/tx_note"
-            app:layout_constraintStart_toStartOf="@+id/tx_note"
-            app:layout_constraintTop_toBottomOf="@+id/tx_note">
+            app:layout_constraintEnd_toEndOf="@+id/tx3"
+            app:layout_constraintStart_toStartOf="@+id/tx3"
+            app:layout_constraintTop_toBottomOf="@+id/tx3">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edTimecalendar"

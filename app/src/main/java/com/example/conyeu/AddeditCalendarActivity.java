@@ -1,7 +1,6 @@
 package com.example.conyeu;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -11,21 +10,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.conyeu.SQLite.DBHelper;
-import com.example.conyeu.object.Baby;
 import com.example.conyeu.object.Calendar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -50,9 +43,9 @@ public class AddeditCalendarActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        edTitle = findViewById(R.id.edt_titlecalendar);
-        edAddress = findViewById(R.id.edt_mapcalendar);
-        edNote = findViewById(R.id.edt_notecalendar);
+        edTitle = findViewById(R.id.edt_namebabybmi);
+        edAddress = findViewById(R.id.edt_address);
+        edNote = findViewById(R.id.edt_note);
         edTime = findViewById(R.id.edTimecalendar);
         edTime.setOnClickListener(view -> {
             final java.util.Calendar calendar = java.util.Calendar.getInstance();

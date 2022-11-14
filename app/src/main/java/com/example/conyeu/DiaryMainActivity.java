@@ -86,6 +86,7 @@ public class DiaryMainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_diary_main);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         getSupportActionBar().setTitle("Nhật kí của mẹ");
 
         // do recyclerview

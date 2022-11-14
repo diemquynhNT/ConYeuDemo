@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.conyeu.BmiList_Activity;
 import com.example.conyeu.CalendarMainActivity;
 import com.example.conyeu.DiaryMainActivity;
 import com.example.conyeu.R;
@@ -51,15 +52,13 @@ public class ItemFunctionAdapter extends RecyclerView.Adapter<ItemFunctionAdapte
             @Override
             public void onClick(View v) {
 
-                if(item.getTitleitem()=="")
+                if(item.getTitleitem()=="Tính chỉ số BMI cho bé")
                 {
-
+                    Intent intent=new Intent(context, BmiList_Activity.class);
+                    context.startActivity(intent);
                 }
                 else if (item.getTitleitem()=="Cẩm nang") {
                     Intent intent=new Intent(context, camnang_Activity.class);
-//                Bundle bundle=new Bundle();
-//                bundle.putSerializable("object_user",cn);
-//                intent.putExtras(bundle);
                     context.startActivity(intent);
 
                 }

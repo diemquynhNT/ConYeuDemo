@@ -58,7 +58,8 @@ public class DiaryActivity extends AppCompatActivity {
         Intent intent = getIntent();
         flag = intent.getIntExtra("flag", 0);
         if(flag == 1){
-            getSupportActionBar().setTitle("Thêm mới nhật kí");
+
+
 
         }else {
             getSupportActionBar().setTitle("Chỉnh sửa nhật kí");
