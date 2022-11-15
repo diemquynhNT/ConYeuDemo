@@ -164,19 +164,7 @@ public class DBHelper {
 
         return dsCamnang;
     }
-//    public void insertCamnang(Camnang camnang){
-//        SQLiteDatabase db = openDBOption();
-//        String cnInsert="INSERT INTO Camnang(titlecn,contentcn,detailcn) VALUES ('Gen','Di truyền và gen','Cấu trúc di truyền')";
-//        db.execSQL(cnInsert);
-//        String cnInsert1="INSERT INTO Camnang(titlecn,contentcn,detailcn) VALUES ('money','toww','five')";
-//        db.execSQL(cnInsert1);
-//
-//    }
-    public void deleteCamnang(int id){
-        SQLiteDatabase db = openDBOption();
-        db.delete("Baby","id = "+id,null);
-        closeDB(db);
-    }
+
 
     public void insertBaby(Baby baby){
 
@@ -253,7 +241,7 @@ public class DBHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("title", diary.title);
         contentValues.put("contentdiary",diary.contentdiary);
-        contentValues.put("datediary",diary.contentdiary);
+        contentValues.put("datediary",diary.datediary);
         int a=diary.getId();
         db.update("Diary",contentValues,"id = "+diary.id,null);
         closeDB(db);
@@ -353,12 +341,12 @@ public class DBHelper {
 
         SQLiteDatabase db = openDBOption();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("namebbbmi",bmi.getNamebbbmi());
-        contentValues.put("datebmi",bmi.getDatebmi());
-        contentValues.put("height",bmi.getHeight() );
-        contentValues.put("weight",bmi.getWeight());
-        contentValues.put("bmi",bmi.getBmi());
-        contentValues.put("age",bmi.getBmi());
+        contentValues.put("namebbbmi",bmi.namebbbmi);
+        contentValues.put("datebmi",bmi.datebmi);
+        contentValues.put("height",bmi.height );
+        contentValues.put("weight",bmi.weight);
+        contentValues.put("bmi",bmi.bmi);
+        contentValues.put("age",bmi.age);
 
         db.insert("BMI",null,contentValues);
         closeDB(db);

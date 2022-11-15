@@ -3,6 +3,8 @@ package com.example.conyeu;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.conyeu.SQLite.DBHelper;
 import com.example.conyeu.object.BMI;
@@ -52,6 +55,25 @@ public class BmiList_Activity extends AppCompatActivity {
 
                 DateFormat df = new SimpleDateFormat("d/M/yyyy");
                 String date = df.format(Calendar.getInstance().getTime());
+                if(ednamebaby.getText().toString().isEmpty()||
+                        edheight.getText().toString().isEmpty()||
+                        edweight.getText().toString().isEmpty()||
+                        edage.getText().toString().isEmpty())
+                {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(BmiList_Activity.this);
+        builder.setTitle("Chưa nhập thông tin !!!");
+       // builder.setMessage("Nhập thông tin");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+                }
+                else{
                 //TINH BMI
                 double  heigh=1;
                 double  weight=1;
@@ -75,6 +97,7 @@ public class BmiList_Activity extends AppCompatActivity {
                     dbHelper=new DBHelper(BmiList_Activity.this);
                     dbHelper.insertBMI(bmi);
 
+            }
             }
         });
 

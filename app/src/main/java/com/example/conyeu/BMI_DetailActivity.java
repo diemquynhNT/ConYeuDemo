@@ -23,6 +23,8 @@ public class BMI_DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi_detail);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Chi tiết");
 
         rcvList=findViewById(R.id.rcvBMIList);
 
@@ -45,5 +47,11 @@ public class BMI_DetailActivity extends AppCompatActivity {
         mListcalendar.addAll(data);
         bmiAdapter=new BMIAdapter(mListcalendar, this);
         rcvList.setAdapter(bmiAdapter);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 }

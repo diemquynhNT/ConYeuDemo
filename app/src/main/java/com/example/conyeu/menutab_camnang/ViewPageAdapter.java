@@ -20,16 +20,16 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
                 return new camnangcon_Fragment();
             case 1:
                 return new camnangme_Fragment();
-            case 3:
-                return new camnangfavorite_Fragment();
+//            case 3:
+//                return new camnangfavorite_Fragment();
 
-            default: return new camnangfavorite_Fragment();
+            default: return new camnangme_Fragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     @Nullable
@@ -43,9 +43,9 @@ public class ViewPageAdapter extends FragmentStatePagerAdapter {
             case 1:
                 title="Cẩm nang cho mẹ";
                 break;
-            case 2:
-                title="Yêu thích";
-                break;
+//            case 2:
+//                title="Yêu thích";
+//                break;
 
         }
 

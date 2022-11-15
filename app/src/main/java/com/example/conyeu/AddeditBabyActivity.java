@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
@@ -77,12 +78,26 @@ public class AddeditBabyActivity extends AppCompatActivity {
         spperiodbaby=findViewById(R.id.sp_periodbaby);
         txperiod=findViewById(R.id.txperiodbb);
 
-        if(spperiodbaby.getSelectedItem().toString()=="Bé đã sinh")
-        {
-            Toast.makeText(this, "Nhập nội dung trước khi lưu", Toast.LENGTH_SHORT).show();
-            txperiod.setText("Sinh nhật");
-        }
-
+//        spperiodbaby.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                String check=spperiodbaby.getSelectedItem().toString();
+//                if(check=="Bé đã sinh")
+//                {
+//                    txperiod.setText("check");
+//                }
+//                else if(check=="thai nhi")
+//                {
+//                    txperiod.setText("ggg");
+//                }
+//                Toast.makeText(getApplication(), "Bạn đã chọn mục:"+check, Toast.LENGTH_LONG).show();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
         // xu ly ten khi flag truyen den
         Intent intent = getIntent();
         flag = intent.getIntExtra("flag", 0);

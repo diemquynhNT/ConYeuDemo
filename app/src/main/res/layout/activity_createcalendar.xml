@@ -77,6 +77,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:focusableInTouchMode="true"
             android:hint="@string/time"
             app:layout_constraintEnd_toEndOf="@+id/tx3"
             app:layout_constraintStart_toStartOf="@+id/tx3"
@@ -86,6 +87,7 @@
                 android:id="@+id/edTimecalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
                 android:inputType="time" />
         </com.google.android.material.textfield.TextInputLayout>
 

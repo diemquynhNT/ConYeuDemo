@@ -63,17 +63,8 @@ public class DiaryMainActivity extends AppCompatActivity  {
                 @Override
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode()==RESULT_OK) {
-                        if (result.getData().getIntExtra("flag", 0) == 1) {
-                            mListDiary = new ArrayList<>();
-                            RefreshDiary();
-
-                        } else if(result.getData().getIntExtra("flag", 0) == 2){
-                            mListDiary = new ArrayList<>();
-                            RefreshDiary();
-                        } else if (result.getData().getIntExtra("flag", 0) == 3){
-                            mListDiary = new ArrayList<>();
-                            RefreshDiary();
-                       }
+                        mListDiary = new ArrayList<>();
+                        RefreshDiary();
                     }
                 }
             }

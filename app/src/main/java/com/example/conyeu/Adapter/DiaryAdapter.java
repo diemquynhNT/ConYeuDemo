@@ -48,21 +48,12 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
             return;
 
         holder.txtitle_diary.setText(diary.getTitle());
-//        holder.txcontent_diary.setText(diary.getContentdiary());
         holder.txdatediary.setText(diary.getDatediary());
+
         holder.linearLayoutDiary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(context);
-//                builder.setTitle("Contact");
-//                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        dialogInterface.dismiss();
-//                    }
-//                });
-//                AlertDialog alertDialog = builder.create();
-//                alertDialog.show();
+
                 listener.onClickListenerDiary(diary);
 
 
@@ -70,13 +61,7 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
             }
         });
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                listener.onItemListener(position,phone);
-//                listener.onItemListener(diary);
-//            }
-//        });
+
 
 
     }
@@ -92,7 +77,7 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.DiaryVH> {
 
     public class DiaryVH extends RecyclerView.ViewHolder{
 
-        TextView txdatediary,txtitle_diary,txcontent_diary;
+        TextView txdatediary,txtitle_diary;
         LinearLayout linearLayoutDiary;
 
         public DiaryVH(@NonNull View itemView) {

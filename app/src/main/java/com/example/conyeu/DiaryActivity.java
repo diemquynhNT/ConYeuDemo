@@ -58,9 +58,7 @@ public class DiaryActivity extends AppCompatActivity {
         Intent intent = getIntent();
         flag = intent.getIntExtra("flag", 0);
         if(flag == 1){
-
-
-
+            getSupportActionBar().setTitle("Thêm nhật kí");
         }else {
             getSupportActionBar().setTitle("Chỉnh sửa nhật kí");
             diary = (Diary) intent.getSerializableExtra("DiaryEdit");
@@ -88,7 +86,7 @@ public class DiaryActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         int id=item.getItemId();
-        DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss");
+        DateFormat df = new SimpleDateFormat("d/MMM/yyyy HH:mm:ss");
         String date = df.format(Calendar.getInstance().getTime());
 
         if(id==R.id.mnSave)
@@ -121,9 +119,6 @@ public class DiaryActivity extends AppCompatActivity {
                         date );
                 dbHelper=new DBHelper(DiaryActivity.this);
                 dbHelper.updateDiary(diarys);
-                Toast.makeText(this, "Nhập nội dung trước khi lưu", Toast.LENGTH_SHORT).show();
-
-
                 Intent intent = new Intent();
                 intent.putExtra("flag",2);
                 setResult(RESULT_OK,intent);

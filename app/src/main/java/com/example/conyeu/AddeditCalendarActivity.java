@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.Notification;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -144,6 +145,11 @@ public class AddeditCalendarActivity extends AppCompatActivity {
                 intent.putExtra("flag",1);
                 setResult(RESULT_OK,intent);
                 finish();
+
+
+                Notification notification=new Notification.Builder(this)
+                .setContentText("lên")
+                        .build();
             }
             else
             {

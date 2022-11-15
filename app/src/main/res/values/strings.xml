@@ -35,8 +35,11 @@
     //canhan
     <string name="namebaby">Tên của con</string>
     <string name="nickname">Nickname của con</string>
-    <string name="heightbaby">Chiều cao </string>
-    <string name="weightbaby">Cân nặng </string>
+    <string name="heightbaby">Chiều cao (cm) </string>
+    <string name="weightbaby">Cân nặng (kg) </string>
+
+    <string name="height">Chiều cao</string>
+    <string name="weight">Cân nặng</string>
     <string name="gioitinh">Giới tính </string>
     <string name="periodbaby">Trạng thái </string>
 
@@ -48,10 +51,16 @@
     <string name="bmi">BMI: </string>
     <string name="bmidetail">Xem chi tiết </string>
     <string name="tinhbmi">Tính BMI </string>
+    <string name="huongdan">Hướng dẫn tra bàng BMI:</string>
+    <string name="huongdan1">
+Cột ngang hiểm thị dộ tuổi của trẻ, từ số tuổi kẽ đường thẳng song song với đường thẳng BMI. Cột này cắt các đường cong ba điểm. Dựa vào chỉ số BMI được tính sẽ cho biết BMI của trẻ đang ở mức nào.
+</string>
+    <string name="age">Tuổi</string>
+
 
     <string-array name="data">
-        <item>Thai Nhi</item>
-        <item>Bé đã sinh</item>
+        <item name="thainhi">Thai Nhi</item>
+        <item name="sinh">Bé đã sinh</item>
 
     </string-array>
     <string-array name="datasex">
